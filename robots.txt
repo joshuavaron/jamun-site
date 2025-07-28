@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jamun.org/sitemap.xml
+Sitemap: https://jamun.org/sitemap.xml
