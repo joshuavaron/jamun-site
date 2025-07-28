@@ -13,6 +13,17 @@
     <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap' rel='stylesheet'>
 
     <style>
+        .main-content {
+            margin-top: 0px; /* default for small screens */
+        }
+
+        /* Apply margin only for medium (≥768px) and large screens */
+        @media screen and (min-width: 768px) {
+            .main-content {
+                margin-top: 75px;
+            }
+        }
+
         header h1 {
             color: #1f2937 !important; /* Ensure the text color is dark gray */
             margin-bottom: 0px;
@@ -134,7 +145,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header style="position: relative;">
         <div class="header-top-row">
             <a href="index.html" aria-label="Home">
               <img src="images/main.webp" alt="Website Icon" class="header-icon" />
@@ -160,7 +171,7 @@
         <a href="#fees-section" class="regular-button">Jump to Fee Schedule</a>
     </header>
 
-    <main>
+    <main class="main-content">
         <section class="key-dates-wrapper">
             <div class="key-dates-section">
                 <h2>Key Dates</h2>
