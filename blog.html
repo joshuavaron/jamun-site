@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - JAMUN</title>
+    <meta name="description" content="Explore articles, tips, and insights on Model UN, global affairs, and youth leadership from JAMUN.">
+    <meta name="keywords" content="Model UN, JAMUN, middle school, blog, student, MUN">
+    <meta name="author" content="JAMUN Team">
+    <link rel="canonical" href="https://www.jamun.org/blog" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/main.webp" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap' rel='stylesheet'>
+
+    <style>
+        /* Body padding for overall page content */
+        body {
+            padding: 0 20%; /* 20% padding on left and right */
+        }
+
+        /* Header and Navigation Colors (from original HTML) */
+        header h1 {
+            color: #1f2937 !important; /* Ensure the text color is dark gray, overriding any other styles */
+        }
+
+        header p {
+            color: #1f2937 !important; /* Ensure the text color is dark gray, overriding any other styles */
+        }
+
+        nav ul li a {
+            color: #1f2937 !important; /* Ensure link text color is dark gray */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        /* --- Main Content Area Styles --- */
+        main {
+            flex-grow: 1;
+            /* Removed max-width and auto margins to allow it to fit within body's 20% padding */
+            width: 100%; /* Ensure main takes full width within its parent (body's padding) */
+            margin-top: 0px; /* Keep this specific alignment */
+            padding: 0px; /* Add some padding to the main content area */
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+        }
+
+        .blog-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted minmax for slightly larger cards */
+            gap: 2rem; /* Spacing between grid items */
+            align-items: stretch; /* This ensures all grid items stretch to the height of the tallest item */
+        }
+
+        /* Blog Post Card Styles */
+        article {
+            background-color: #ffffff; /* bg-white */
+            border-radius: 0.75rem; /* Equivalent to rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            overflow: hidden;
+            transform: scale(1); /* transform */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition duration-300 */
+            display: flex; /* Use flexbox for the article content */
+            flex-direction: column; /* Stack children vertically */
+        }
+
+        article:hover {
+            transform: scale(1.03); /* Slightly less aggressive scale on hover */
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04); /* Adjusted shadow on hover */
+        }
+
+        article img {
+            width: 100%; /* w-full */
+            height: 12rem; /* h-48 */
+            object-fit: cover; /* object-cover */
+            object-position: center; /* object-center */
+            border-top-left-radius: 0.75rem; /* rounded-t-xl */
+            border-top-right-radius: 0.75rem; /* rounded-t-xl */
+        }
+
+        article .p-6 {
+            padding: 1.5rem; /* p-6 */
+            display: flex; /* Use flexbox for the content inside p-6 */
+            flex-direction: column; /* Stack children vertically */
+            flex-grow: 1; /* Allow this section to grow and fill available space */
+        }
+
+        article h2 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+
+        article p.text-sm {
+            font-size: 0.875rem; /* text-sm */
+            color: #6b7280; /* text-gray-500 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+
+        article p.text-gray-700 {
+            color: #374151; /* text-gray-700 */
+            line-height: 1.625; /* leading-relaxed */
+            margin-bottom: 1rem; /* mb-4 */
+            flex-grow: 1; /* Allow the paragraph to grow and push the button down */
+        }
+
+        /* Footer Styles to extend full width */
+        footer {
+            width: 100vw; /* Set width to full viewport width */
+            position: relative; /* Needed for margin-left calculation */
+            left: 50%; /* Move the element to the center of the viewport */
+            transform: translateX(-50%); /* Shift it back by half its width to truly center */
+            /* The following properties were removed to preserve the original footer's appearance */
+            /* margin-top: 2rem; */
+            /* padding: 2rem 0; */
+            /* background-color: #f3f4f6; */
+            /* color: #1f2937; */
+            /* text-align: center; */
+            /* box-sizing: border-box; */
+        }
+
+        /* Media query for smaller screens to reduce padding */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 5%; /* Reduce padding on smaller screens */
+            }
+            .footer-container {
+                gap: 2rem; /* Reduce gap on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative; padding-left: 0px; padding-right: 0px;">
+        <div class="header-top-row">
+            <a href="index.html" aria-label="Home">
+              <img src="images/main.webp" alt="Website Icon" class="header-icon" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="committees.html">Committees</a></li>
+                    <li><a href="resources.html">Prep & Resources</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc2eIKQTExf9tn7bxOA4K_oWNeRTw7ghDttpkoZ5fQtQT3XXw/viewform?usp=dialog">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>JAMUN Blog</h1>
+        <p>Dive into the world of Model UN with our latest articles, insights, and tips for young diplomats.</p>
+    </header>
+
+    <main>
+        <section class="blog-posts-grid">
+            <article>
+                <img src="images/Writing.webp" alt="Position paper" />
+                <div class="p-6">
+                    <h2>Mastering Your First Position Paper</h2>
+                    <p class="text-sm">By Joshua Varon | July 27, 2025</p>
+                    <p class="text-gray-700">
+                        Your first Model UN position paper can feel like a monumental task: between finding the perfect sources and researching the strongest actions your country has historically taken, the process of writing a position paper can easily overwhelm even the most experienced delegate.
+                    </p>
+                    <a href="blogposts/post1.html" class="regular-button">Read More</a>
+                </div>
+            </article>
+
+            <article>
+                <img src="images/blogpost2.webp" alt="General assembly" />
+                <div class="p-6">
+                    <h2>Are GA Committees Better than Crisis Committees?</h2>
+                    <p class="text-sm">By Sahana Shah | July 28, 2025</p>
+                    <p class="text-gray-700">
+                        You might've heard people talking about GA committees and crisis committees, but what are they really, and which one is better?
+                    </p>
+                    <a href="blogposts/post2.html" class="regular-button">Read More</a>
+                </div>
+            </article>
+
+            <article>
+                <img src="images/blogpost3.webp" alt="Crisis committee" />
+                <div class="p-6">
+                    <h2>Are Ad Hoc Crises Better than Regular Crisis Committees?</h2>
+                    <p class="text-sm">By Andrew Calderon | July 28, 2025</p>
+                    <p class="text-gray-700">
+                        Ad Hoc crises are similar in format to regular crisis committees. Both types follow a continuous crisis format, with crisis updates coming in every so often that present new issues and problems for the committee to deal with.
+                    </p>
+                    <a href="blogposts/post3.html" class="regular-button">Read More</a>
+                </div>
+            </article>
+
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="about.html">Our Mission</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:alexfumerton@gmail.com">Email Us</a>
+                <a href="https://www.instagram.com/jamun_usa" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.youtube.com/@JAMUN_USA" target="_blank" rel="noopener">YouTube</a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 The Junior Assembly of the Model United Nations</p>
+    </footer>
+
+</body>
+</html>

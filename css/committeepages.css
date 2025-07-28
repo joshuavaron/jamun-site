@@ -1,0 +1,155 @@
+/* Styles moved from inline and renamed */
+.committee-strong {
+    font-size: 0.5em;
+    font-weight: 700;
+}
+
+/* Ensure main content stacks vertically */
+.committee-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+
+/* Two-column layout */
+.committee-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+@media (min-width: 768px) {
+    .committee-columns {
+        flex-direction: row;
+    }
+    .column-left {
+        flex: 1;
+        min-width: 400px;
+    }
+    .column-right {
+        flex: 2;
+    }
+}
+
+/* Column styling */
+.committee-column {
+    border-radius: 0.5rem;
+}
+
+.column-left {
+    background-color: #ffffff;
+}
+
+.column-right {
+    background-color: #ffffff;
+}
+
+.left-column-section {
+    margin-bottom: 1.5rem;
+}
+
+.left-column-section h3 {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.left-column-section p {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.right-column-section {
+    margin-bottom: 0rem;
+}
+
+.right-column-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.right-column-section p {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Committee Members Section */
+.committee-members-section {
+    padding: 3rem 0rem;
+}
+
+.committee-members-header {
+    font-weight: 400;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.committee-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.committee-members-grid div {
+    background-color: #ffffff;
+    padding: 0.75rem 0rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #374151;
+}
+
+.committee-member {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #374151;
+    gap: 0.75rem;
+}
+
+.member-icon {
+    width: 35px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.header-email {
+    font-size: 16px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 100;
+}
+
+header h2 {
+    margin-top: 0px;
+    margin-bottom: 7px;
+    padding-right: 20%;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    color: white !important;
+}

@@ -1,0 +1,925 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative; /* Needed for absolute positioning of children */
+  min-height: 100vh; /* Ensure body takes full height */
+  display: flex; /* Use flexbox to stack content after the full-screen image */
+  flex-direction: column;
+  font-family: "Freight Text Pro", Georgia, serif; /* Set font for the entire page */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Style for the full-screen image */
+.fullscreen-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(60%);
+  position: absolute; /* Position absolutely to act as background */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Send it to the background */
+}
+
+/* Style for the header to overlay on the image */
+header {
+  position: absolute; /* Position absolutely over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure it's above the image */
+  color: white; /* Make text visible against dark image */
+  padding: 20px 20%; /* Added 10% padding on left and right */
+  box-sizing: border-box; /* Include padding in width calculation */
+  display: flex; /* Make header a flex container */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Container for icon and navigation to allow vertical centering */
+.header-top-row {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Push items to opposite ends */
+  width: 100%; /* Ensure it spans the width within header's padding */
+}
+
+/* Style for the icon at the top left */
+.header-icon {
+  width: 80px; /* Increased icon size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+header h1 {
+  margin-top: 150px; /* Increased margin to create more space from nav/icon */
+  margin-bottom: 40px; /* Decreased margin below h1 to bring p closer */
+  padding-right: 20%;
+  font-size: 4.5em; /* Made H1 text larger */
+  font-weight: lighter; /* Made H1 text thinner */
+  text-align: left; /* Aligned h1 to the left */
+  color: white !important; /* Ensure the text color is white, overriding any other styles */
+}
+
+header h2 {
+    font-size: 15px; /* Reverted font size for topic titles */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #1f2937; /* Dark gray for headings */
+    margin-bottom: 0px;
+    margin-top: 1rem;
+    /* Removed line styles from h2 */
+}
+
+.header-line {
+  border-bottom: 2px solid #0f172a; /* Dark blue line */
+  width: 50px; /* Short width for the line */
+  margin-bottom: 32px; /* Space after the line */
+  margin-top: 32px; /* Space before the line */
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 100;
+  padding-right: 20%;
+  text-align: left; /* Aligned p to the left */
+  color: white !important; /* Ensure the text color is white, overriding any other styles */
+  margin-top: 0; /* Removed default top margin from p */
+}
+
+/* Style for navigation links */
+nav ul {
+  list-style: none;
+  padding: 0; /* Ensure no padding on the ul */
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white !important; /* Ensure link text color is white */
+  text-decoration: none !important; /* Ensure no underline */
+  font-weight: 600;
+  padding: 5px 10px;
+  font-family: 'Montserrat', serif;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+/* Adjust main content to start after the full-screen image area */
+main {
+  margin-top: 100vh; /* Push main content down below the full-screen image */
+  padding: 20px 20%; /* Added 10% padding on left and right */
+  background-color: white; /* Ensure main content has a background */
+  z-index: 5; /* Ensure main content is above the image but below header */
+  position: relative; /* Needed for z-index to work */
+  flex-grow: 1; /* Allow main to take available space */
+  box-sizing: border-box; /* Include padding in width calculation */
+  font-family: 'Montserrat', serif; /* Set font for main content */
+}
+
+/* Styling for the "What We Do" section heading */
+main section h2 {
+  font-family: "Freight Text Pro", Georgia, serif; /* Set font for the entire page */
+  letter-spacing: 2px;
+  text-align: center; /* Center the "What We Do" heading */
+  margin-bottom: 25px; /* Adjusted margin-bottom to decrease gap */
+  font-size: 2.5em; /* Made H2 text larger */
+}
+
+/* Carousel Styling */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px; /* add spacing between slides */
+}
+
+.carousel-item {
+    width: calc((100% - 20px) / 3); /* subtract total gap (2 x 10px) from container width */
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px; /* rounded corners */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 24px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-dots .active {
+    background-color: #333;
+}
+
+
+/* New section styling for "Our Impact" */
+.impact-section {
+  position: relative; /* Needed for absolute positioning of its image */
+  width: 100vw; /* Make it full viewport width */
+  left: 50%; /* Shift it half its width to the right */
+  transform: translateX(-50%); /* Shift it back half its width to center */
+  height: 600px; /* Increased height to accommodate circles */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px 20%; /* Keep text content padded */
+  box-sizing: border-box;
+  overflow: hidden; /* Hide overflowing image parts */
+  margin-top: 40px; /* Add some space above this section */
+}
+
+.impact-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* Darken image for text readability */
+  z-index: -1; /* Send to background */
+}
+
+.impact-section h2 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.impact-section p {
+  font-size: 1.1em;
+  max-width: 800px; /* Constrain text width */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Styles for the overlapping circles */
+.impact-circles-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Increased max width for the circle arrangement */
+  height: 350px; /* Increased height to contain larger circles */
+  margin-top: 100px; /* Space between text and circles */
+  margin-bottom: 40px; /* Space below the circles */
+  display: flex; /* Use flexbox for easier alignment */
+  justify-content: center; /* Center the circles horizontally */
+  align-items: center; /* Center the circles vertically */
+}
+
+.impact-circle {
+  position: absolute; /* Keep absolute for overlapping */
+  width: 300px; /* Increased size for all circles */
+  height: 300px; /* Increased size for all circles */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push content toward top */
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px 0px 20px; /* More padding at top */
+  gap: 15px; /* Add vertical spacing between h3 and p */
+  box-sizing: border-box;
+  color: #333; /* Default text color for circles */
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.5s ease-in-out; /* Smooth transitions for positioning/opacity */
+  padding-top: 0; /* Reset padding-top */
+}
+
+.impact-circle h3 {
+  font-size: 3.8em; /* Made header text larger */
+  margin-bottom: 12px; /* Reduced margin to bring body text closer */
+  max-width: 80%; /* Make text narrower */
+  font-weight: bold;
+}
+
+.impact-circle p {
+  font-size: 1.3em; /* Made body text larger */
+  line-height: 1.4;
+  max-width: 80%; /* Make text narrower */
+  margin: 0 auto;
+}
+
+.impact-circle.left {
+  background-color: white;
+  opacity: 0.85;
+  z-index: 2;
+  /* Adjusted transform to move text higher up within the circle */
+  transform: translateX(-270px) translateY(-30px); /* Shift left and up */
+}
+
+.impact-circle.center {
+  background-color: #87CEEB; /* Light Blue */
+  opacity: 1;
+  z-index: 3; /* Middle circle on top */
+  /* Adjusted transform to move text higher up within the circle */
+  transform: translateY(-30px); /* Shift up */
+  color: white; /* Text color for center circle */
+}
+
+.impact-circle.right {
+  background-color: white;
+  opacity: 0.85;
+  z-index: 2;
+  /* Adjusted transform to move text higher up within the circle */
+  transform: translateX(270px) translateY(-30px); /* Shift right and up */
+}
+
+/* Conference Highlights Section */
+.conference-section {
+  padding: 60px 20%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background: none;
+}
+
+.conference-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.conference-upcoming {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.conference-past {
+  font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.conference-past ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.conference-past li {
+  margin-bottom: 8px;
+}
+
+.conference-quote {
+  font-size: 1.3em;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.conference-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  padding: 6px 0;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.conf-date {
+  text-align: left;
+  flex: 1;
+}
+
+.conf-location {
+  text-align: right;
+  flex: 1;
+  font-style: italic;
+}
+
+.register-banner {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background-image: url('../images/registerbutton.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.register-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.2); /* dark blue with 20% opacity */
+  z-index: 1;
+}
+
+.register-overlay {
+  text-align: center;
+  z-index: 2; /* must be above the overlay */
+}
+
+.register-button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 1.1rem 2rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.25px solid #ffffff;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+  width: 275px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.register-button span {
+  display: inline-block;
+  padding: 0rem 0.5rem;
+  letter-spacing: 6px;
+  transition: letter-spacing 0.3s ease;
+}
+
+.register-button:hover span {
+  letter-spacing: 10px;
+}
+
+.regular-button {
+  font-size: 14px;
+  padding: 0.7rem 1rem;
+  background-color: transparent;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  width: fit-content;
+  /* Changed margin to align left */
+  margin: 1rem 0 1rem 0;
+  white-space: nowrap; /* Keep text on one line */
+}
+
+.regular-button:hover {
+  color: #93c5fd;
+  border-color: #93c5fd;
+  background-color: rgba(147, 197, 253, 0.1);
+}
+
+footer {
+  background-color: rgb(15, 24, 49);
+  color: #aaa;
+  padding: 20px 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85em;
+  line-height: 1.5;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto 15px auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.footer-column h4 {
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 6px;
+  color: #bbb;
+}
+
+.footer-column a {
+  color: #888;
+  text-decoration: none;
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.footer-column a:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #666;
+  font-size: 0.75em;
+  margin: 0;
+  user-select: none;
+}
+
+/* General Responsive Adjustments */
+body {
+    overflow-x: hidden; /* Ensure this is always here */
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Header Section */
+    header {
+        padding: 15px 5%; /* Less padding on small screens */
+    }
+
+    .header-top-row {
+        flex-direction: column; /* Stack icon and nav */
+        align-items: center; /* Center them */
+    }
+
+    .header-icon {
+        width: 60px; /* Smaller icon */
+        margin-bottom: 15px; /* Space below icon */
+    }
+
+    header h1 {
+        font-size: 2.2em; /* Smaller H1 text */
+        margin-top: 50px; /* Less space from nav/icon */
+        margin-bottom: 20px;
+        padding-right: 2%; /* Adjust padding */
+        padding-left: 2%;
+        text-align: center; /* Center H1 */
+    }
+
+    header h2 {
+        font-size: 2.2em; /* Smaller H1 text */
+        margin-top: 50px; /* Less space from nav/icon */
+        margin-bottom: 20px;
+        padding-right: 2%; /* Adjust padding */
+        padding-left: 2%;
+        text-align: center; /* Center H1 */
+    }
+
+    header h2 {
+        font-size: 14px; /* Reverted font size for topic titles */
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: #1f2937; /* Dark gray for headings */
+        margin-bottom: 0px;
+        margin-top: 1rem;
+        text-align: center; /* Center h2 */
+        /* Removed line styles from h2 */
+    }
+
+
+    header p {
+        font-size: 16px;
+        padding-right: 2%; /* Adjust padding */
+        padding-left: 2%;
+        text-align: center; /* Center paragraph */
+    }
+
+    .header-email {
+        padding-left: 2%;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        align-items: center; /* Center nav items */
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 8px 0; /* Vertical margin for stacked links */
+    }
+
+    nav ul li a {
+        padding: 8px 15px; /* Larger tap target */
+    }
+
+    .regular-button {
+        width: 70%; /* Full width button */
+        text-align: center; /* Center button text */
+        margin: 1rem auto; /* Center the button */
+    }
+
+    /* Main Content */
+    main {
+        padding: 15px 5%; /* Adjust main content padding */
+    }
+
+    main section h2 {
+        font-size: 2em; /* Smaller H2 */
+        margin-bottom: 20px;
+    }
+
+    /* Carousel */
+    .carousel-item {
+        width: 100%; /* Show one item at a time */
+    }
+
+    /* Our Impact Section */
+    .impact-section {
+        height: auto; /* Auto height to fit stacked content */
+        padding: 40px 5%; /* Adjust padding */
+    }
+
+    .impact-section h2 {
+        font-size: 2em; /* Smaller H2 */
+    }
+
+    .impact-section p {
+        font-size: 1em; /* Smaller paragraph */
+    }
+
+    .impact-circles-container {
+        flex-direction: column; /* Stack circles vertically */
+        height: auto; /* Auto height */
+        margin-top: 50px; /* Less space */
+        margin-bottom: 20px;
+    }
+
+    .impact-circle {
+        position: relative; /* Remove absolute positioning */
+        width: 250px; /* Smaller circles */
+        height: 250px;
+        margin-bottom: 20px; /* Space between stacked circles */
+        transform: none !important; /* Remove all transforms */
+        padding: 20px; /* Adjust padding for content */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+    }
+
+    .impact-circle h3 {
+        font-size: 2.8em; /* Smaller header in circle */
+        margin-bottom: 8px; /* Adjust margin */
+    }
+
+    .impact-circle p {
+        font-size: 1em; /* Smaller body in circle */
+    }
+
+    /* Conference Section */
+    .conference-section {
+        padding: 30px 5%; /* Adjust padding */
+    }
+
+    .conference-section h2 {
+        font-size: 2em;
+    }
+
+    .conference-upcoming,
+    .conference-past {
+        font-size: 1em;
+    }
+
+    .conference-item {
+        flex-direction: column; /* Stack date and location */
+        align-items: center; /* Center them */
+        margin-bottom: 15px;
+    }
+
+    .conf-date, .conf-location {
+        text-align: center; /* Center text for stacked items */
+        flex: none; /* Remove flex sizing */
+    }
+
+    .conf-location {
+        margin-top: 5px; /* Space between date and location */
+    }
+
+    .conference-quote {
+        font-size: 1.1em;
+    }
+
+    /* Register Banner */
+    .register-banner {
+        height: 50vh; /* Shorter banner */
+    }
+
+    .register-button {
+        font-size: 16px;
+        padding: 0.8rem 1.5rem;
+        width: 200px; /* Adjust button width */
+    }
+
+    .register-button span {
+        letter-spacing: 4px; /* Adjust letter spacing */
+    }
+
+    .register-button:hover span {
+        letter-spacing: 6px; /* Adjust hover letter spacing */
+    }
+
+    .header-line{
+        align-self: center;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 5%;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack footer columns */
+        text-align: center; /* Center footer content */
+    }
+
+    .footer-column {
+        min-width: unset; /* Remove min-width */
+        margin-bottom: 20px; /* Space between columns */
+    }
+
+    .footer-column h4 {
+        margin-bottom: 10px;
+    }
+
+    .footer-column a {
+        margin-bottom: 8px;
+    }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    header {
+        padding: 20px 8%;
+    }
+
+    header h1 {
+        font-size: 3.5em;
+        margin-top: 100px;
+        padding-right: 8%;
+    }
+
+    header p {
+        font-size: 17px;
+        padding-right: 10%;
+    }
+
+    main {
+        padding: 20px 8%;
+    }
+
+    main section h2 {
+        font-size: 2.2em;
+    }
+
+    /* Carousel */
+    .carousel-item {
+        width: calc((100% - 10px) / 2); /* Show two items at a time with a gap */
+    }
+
+    /* Our Impact Section */
+    .impact-section {
+        height: 500px; /* Slightly reduced height */
+        padding: 20px 8%;
+    }
+
+    .impact-section h2 {
+        font-size: 2.5em;
+    }
+
+    .impact-section p {
+        font-size: 1.05em;
+    }
+
+    .impact-circles-container {
+        height: 300px; /* Adjusted height */
+        margin-top: 80px;
+    }
+
+    .impact-circle {
+        width: 250px; /* Slightly smaller circles */
+        height: 250px;
+        /* Adjust transforms for new sizes */
+        transform: translateY(-20px) !important; /* Keep a slight lift */
+    }
+
+    .impact-circle.left {
+        transform: translateX(-220px) translateY(-20px) !important;
+    }
+
+    .impact-circle.right {
+        transform: translateX(220px) translateY(-20px) !important;
+    }
+
+    .impact-circle h3 {
+        font-size: 3em;
+    }
+
+    .impact-circle p {
+        font-size: 1.1em;
+    }
+
+    /* Conference Section */
+    .conference-section {
+        padding: 50px 8%;
+    }
+
+    .conference-section h2 {
+        font-size: 2.2em;
+    }
+
+    .conference-quote {
+        font-size: 1.2em;
+    }
+
+    /* Register Banner */
+    .register-banner {
+        height: 60vh;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 8%;
+    }
+
+    .footer-container {
+        justify-content: space-around; /* Distribute columns better */
+    }
+}
+
+/* Large devices (desktops, 901px and up) - Current styles are largely for this */
+@media only screen and (min-width: 901px) {
+    header {
+        padding: 20px 20%; /* Original padding */
+    }
+
+    header h1 {
+        font-size: 4.5em; /* Original size */
+        margin-top: 150px;
+        padding-right: 20%;
+    }
+
+    header p {
+        font-size: 18px;
+        padding-right: 20%;
+    }
+
+    main {
+        padding: 20px 20%; /* Original padding */
+    }
+
+    main section h2 {
+        font-size: 2.5em; /* Original size */
+    }
+
+    .carousel-item {
+        width: calc((100% - 20px) / 3); /* Original 3 items */
+    }
+
+    .impact-section {
+        height: 600px; /* Original height */
+        padding: 20px 20%;
+    }
+
+    .impact-section h2 {
+        font-size: 3em;
+    }
+
+    .impact-section p {
+        font-size: 1.1em;
+    }
+
+    .impact-circle {
+        width: 300px; /* Original size */
+        height: 300px;
+    }
+
+    .impact-circle.left {
+        transform: translateX(-270px) translateY(-30px); /* Original transform */
+    }
+
+    .impact-circle.center {
+        transform: translateY(-30px); /* Original transform */
+    }
+
+    .impact-circle.right {
+        transform: translateX(270px) translateY(-30px); /* Original transform */
+    }
+
+    .impact-circle h3 {
+        font-size: 3.8em;
+    }
+
+    .impact-circle p {
+        font-size: 1.3em;
+    }
+
+    .conference-section {
+        padding: 60px 20%;
+    }
+
+    .register-banner {
+        height: 75vh;
+    }
+
+    .register-button {
+        font-size: 20px;
+        padding: 1.1rem 2rem;
+        width: 275px;
+    }
+
+    footer {
+        padding: 20px 20%;
+    }
+}

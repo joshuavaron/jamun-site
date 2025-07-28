@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prep & Resources - JAMUN</title>
+    <meta name="description" content="JAMUN is a youth-led Model United Nations platform where students engage in global diplomacy. Learn, debate, and lead.">
+    <meta name="keywords" content="Model UN, JAMUN, middle school, prep, resources, student, MUN">
+    <meta name="author" content="JAMUN Team">
+    <link rel="canonical" href="https://www.jamun.org/resources" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/main.webp" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap' rel='stylesheet'>
+
+    <style>
+        /* Header and Navigation Colors */
+        header h1 {
+            color: #1f2937 !important; /* Dark gray for headings */
+        }
+
+        header p {
+            color: #1f2937 !important; /* Dark gray for text */
+        }
+
+        nav ul li a {
+            color: #1f2937 !important; /* Dark gray for link text */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        /* Resource Section specific styles */
+        .resource-section h3 {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+
+        .resource-section p {
+            font-size: 18px;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+
+        header {
+            padding-bottom: 0px;
+        }
+
+        main {
+            padding-top: 0px; /* Removed top padding to align header with the top of the page */
+        }
+
+        /* Tour Slider Specific Styles */
+        .tour-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .tour-tab {
+            background-color: #f3f4f6;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            flex-shrink: 0;
+        }
+
+        .tour-tab:hover,
+        .tour-tab.active {
+            background-color: #d1d5db;
+        }
+
+        .tour-slider {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .tour-content-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* Set width to accommodate all panes, e.g., 3 panes = 300% */
+        }
+
+        .tour-pane {
+            width: 33.3333%; /* Each pane is 1/3 of the container's total width */
+            padding: 2rem;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        /* --- New Layout for Main Content --- */
+        .main-content-grid {
+            display: flex; /* Use flexbox for the main content area */
+            gap: 2rem; /* Space between the two columns */
+            margin: 20px auto; /* Center the content and add vertical margin */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .left-column {
+            flex: 9; /* Left column takes 2 parts of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        .right-column {
+            flex: 4; /* Right column takes 1 part of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        /* --- Prep Materials Grid (similar to blog-posts-grid) --- */
+        .prep-materials-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for tiles in the right column */
+            gap: 1.5rem; /* Spacing between tiles */
+        }
+
+        /* Prep Material Tile Styles (adapted from blog post cards) */
+        .prep-material-tile {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .prep-material-tile:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .prep-material-tile img {
+            width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        .prep-material-tile .p-4 {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .prep-material-tile h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .prep-material-tile p {
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        /* Styling for the More Prep Materials heading */
+        .right-column .prep-materials-heading {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content-grid {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .left-column, .right-column {
+                flex: none; /* Remove flex sizing */
+                width: 100%; /* Take full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative">
+        <div class="header-top-row">
+            <a href="index.html" aria-label="Home">
+              <img src="images/main.webp" alt="Website Icon" class="header-icon" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="committees.html">Committees</a></li>
+                    <li><a href="resources.html">Prep & Resources</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc2eIKQTExf9tn7bxOA4K_oWNeRTw7ghDttpkoZ5fQtQT3XXw/viewform?usp=dialog">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Prep & Resources</h1>
+        <p>Preparing for a Model UN conference can feel be really exciting, but it can also feel a little overwhelming. Don't worry! This section is here to help you feel confident and ready to shine at your next JAMUN conference. Whether you're brand new or have a few conferences under your belt, we've crafted the best prep materials that we could to make sure you have everything you need to understand your country, your committee, and your topic. From research tips to position paper guides and public speaking advice, these tools are designed with middle school delegates in mind. Let's get you prepped, polished, and ready to represent!</p>
+    </header>
+
+    <main style="margin-top: 0px">
+        <div class="main-content-grid">
+            <!-- Left Column: Existing Resource Sections -->
+            <div class="left-column">
+                <section class="resource-section">
+                    <h3>Background Guides</h3>
+                    <p>The background guide is your starting point for understanding the topic your committee will discuss. Written by the chairs, it gives you important context about the issue, key terms, major events, and some of the challenges involved. It's designed to help you begin your research and figure out how your assigned country might respond to the problem.</p>
+                    <p>Even though JAMUN background guides are designed to be clear and concise, they can easily feel large and inaccessible. Click on the buttons below to get a quick tour of a sample background guide (NATO)!</p>
+                    <div>
+                        <div class="tour-buttons">
+                            <button class="tour-tab" data-index="0">Introduction and Statement of the Problem</button>
+                            <button class="tour-tab" data-index="1">Past Actions</button>
+                            <button class="tour-tab" data-index="2">Possible Solutions</button>
+                            <button class="tour-tab" data-index="3">Portfolio Powers (Crisis Only)</button>
+                        </div>
+
+                        <div class="tour-slider">
+                            <div class="tour-content-container" style="width: 400%;">
+                                <div class="tour-pane" style="width: 25%;">
+                                    <h3>Introduction to the Committee</h3>
+                                    <p>The North Atlantic Treaty Organization (NATO) was established on April 4, 1949, by twelve founding members located in North America and Europe. NATO’s central mission is to guarantee the security of its constituents through political and military means. NATO operates on the principle of collective defense, meaning that an attack against one ally is considered an attack on the entire alliance.</p>
+                                    <h3>Statement of the Problem</h3>
+                                    <p>Since its founding during the Cold War, NATO has aimed to protect its members from numerous external threats, particularly from those posed by the Soviet Union and now Russia. After the USSR's collapse, several former Soviet republics sought NATO membership to ensure their security and independence. While many have since joined, Russia has strongly opposed this expansion, claiming strategic interests in its former territories.</p>
+                                    <h3>Explanation</h3>
+                                    <p>Although these two sections of a real background guide have been shortened for this demonstration, you can see that they clearly lay out what your committee does and why the problem is relevant to it's mission. Careful reading of this section will help you understand what you will be discussing in committee, as well as the relationships (or lack thereof) between the countries in your committee. For example, if you represent a western country, reading this background should tell you to expect spirited debate with the delegate from Russia.</p>
+                                </div>
+                                <div class="tour-pane" style="width: 25%;">
+                                    <h3>Past NATO Actions</h3>
+                                    <p>NATO has long recognized the threat posed by Russian aggression along its eastern borders. In response, the Alliance has taken a series of coordinated actions to strengthen regional security and deter further escalation. Over the past decade, the alliance has launched several key initiatives, increased defense spending commitments, and expanded joint military exercises. Most recently, NATO has intensified its support for Ukraine and other vulnerable partners through intelligence sharing, training programs, and non-lethal aid in response to Russia’s 2022 invasion.</p>
+
+                                    <h4>NATO Enhanced Forward Presence</h4>
+                                    <p>One of NATO’s most significant post-2014 initiatives is its Enhanced Forward Presence (eFP), launched in response to growing security threats from Russia, particularly after the annexation of Crimea. Established at the 2016 Warsaw Summit, eFP placed multinational battlegroups in Estonia, Latvia, Lithuania, and Poland. The mission was not only military in nature but also political, symbolizing the Alliance’s commitment to collective defense under Article 5.</p>
+                                    <p>The eFP is more than just a deployment. It represents NATO’s evolving strategic defense approach. It plays a crucial role in strengthening cooperation, deterring hybrid threats, and conducting joint training. Ultimately, this mission helps protect frontline NATO allies and supports broader regional stability at a time of heightened tension with Russia.</p>
+
+                                    <h3>Explanation</h3>
+                                    <p>This section is a useful reference for understanding what actions your committee has already taken on the issue. If your country has supported past NATO missions, you'll want to highlight that in speeches and working papers. On the other hand, if your country has expressed concerns about NATO’s actions, this is your chance to propose a new direction. Knowing what’s been done helps you avoid proposing unrealistic or redundant ideas—and makes your diplomacy more grounded and persuasive.</p>
+                                </div>
+
+                                <div class="tour-pane" style="width: 25%;">
+                                    <h3>Possible Solutions</h3>
+                                    <h4>Expand and Modernize NATO’s Cyber Defense Capabilities</h4>
+                                    <p>Expanding NATO’s cyber defense capabilities is essential to addressing growing hybrid threats across the eastern flank. Cyberattacks, often linked to Russian state-sponsored actors, have targeted government institutions, energy grids, and media outlets in several NATO countries. Without robust defenses, these attacks can disrupt essential services, weaken trust in institutions, and create internal instability. Investing in joint cyber defense helps members respond quickly and reduce vulnerability.</p>
+                                    <p>One key component of this effort is strengthening centralized cyber coordination. The Alliance can support member states by establishing a joint cyber response team that monitors threats in real time, shares intelligence across borders, and helps coordinate defenses during a major incident. Cybersecurity training programs and simulation exercises can also ensure that member states have the knowledge and tools to handle attacks effectively.</p>
+                                    <h4>Deepen Support for NATO Partners Like Ukraine and Georgia</h4>
+                                    <p>Although not NATO members, countries like Ukraine and Georgia remain vital to regional security and stability in Eastern Europe. Their proximity to Russia and pursuit of Western integration have made them frequent targets of military aggression and political interference. Supporting these nations allows the Alliance to strengthen its eastern flank while helping defend democratic values and national sovereignty.</p>
+                                    <p>One approach is expanding non-lethal aid, such as intelligence-sharing, logistical support, and defensive training programs. NATO can help build partner capacity by providing equipment like communication systems, body armor, and medical supplies. Military advisers and trainers could assist local forces in areas such as border security, hybrid threat response, and cyber defense.</p>
+                                    <h3>Explanation</h3>
+                                    <p>This section gives you a launching pad for your own policy proposals. Background guides won’t tell you exactly what to say in committee—but they will highlight realistic and relevant options to build on. Use this section to start brainstorming what your country can bring to the table: do you want to advocate for military support, cyber investments, diplomatic dialogue, or economic tools? The best solutions are creative, feasible, and backed up by your country’s values and capabilities.</p>
+                                </div>
+
+                                <div class="tour-pane" style="width: 25%;">
+                                    <p>Note: These portfolio powers have been taken from a different committee (BOLSHEVIK).</p>
+                                    <h3>Portfolio Powers</h3>
+                                    <h4>Alexei Rykov, People's Commissar of Internal Affairs</h4>
+                                    <p>Rykov was a former factory worker who later on turned revolutionary. Before he became Commissar of Internal Affairs, he was strongly opposed to Lenin’s authoritarian style. Though initially he supported a more inclusive style of leadership, Rykov now believes in strong leadership and thinks the new government must focus on controlling chaos and enforcing laws. Rykov's main focus is to help the Bolsheviks stay in power and build a strong system from within. His top priority is to enforce order to hold the revolution together.</p>
+                                    <h4>Vladimir Milyutin, People’s Commissar of Agriculture</h4>
+                                    <p>Milyutin insists on helping farmers and making sure people have enough food. He supports the revolution, but is nervous about giving all the power to just one group. He wants the Soviets (workers councils) to have more say. He may try to push for more fair and balanced policies, especially in the countryside.</p>
+                                    <h3>Explanation</h3>
+                                    <p>In crisis committees, portfolio powers give you the chance to take direct, individual action—whether it’s deploying troops, negotiating with rivals, or launching a propaganda campaign. These character summaries show how delegates might think and act in the moment. For example, Rykov might use his powers to crack down on dissent or strengthen internal security, while Milyutin could prioritize land reform or support rural workers. Knowing your portfolio’s goals and limitations helps you create believable and effective crisis arcs during committee.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resource-section">
+                    <h3>Position Papers</h3>
+                    <p>A position paper is a short document that shows your understanding of the issue your committee is discussing and how your assigned country sees it. Think of it as your chance to explain your country's point of view before the debate even begins. It should include background on the topic, your country's past actions or policies, and your proposed solutions.</p>
+                    <p>Remember, your position paper will be the first thing your chairs know about you. Taking your time to write a strong position paper will be worth it once you get to committee. A strong position paper helps you organize your thoughts and kick off the conference with confidence!</p>
+                    <p>Not sure where to start? Click on one of the buttons below to get a walkthrough of what a good position paper (about data privacy laws) looks like!</p>
+                    <div>
+                        <div class="tour-buttons">
+                            <button class="tour-tab" data-index="0">Introduction</button>
+                            <button class="tour-tab" data-index="1">Body</button>
+                            <button class="tour-tab" data-index="2">Conclusion</button>
+                        </div>
+
+                        <div class="tour-slider">
+                            <div class="tour-content-container">
+                                <div class="tour-pane">
+                                    <h3>First Paragraph</h3>
+                                    <p>As the global dependence on digital data storage and processing increases, so too must its rules and regulations surrounding these practices. The government of Iceland urges the governments of other nations to consider the impact of modern data processing technology and techniques including, but not limited to, deep learning algorithms and quantum computing on the security of the data of private individuals. Furthermore, the government of Iceland believes that in order to effectively ensure international data privacy, nations should adopt a universal standard for domestic and international data privacy practices.</p>
+                                    <h3>Explanation</h3>
+                                    <p>This paragraph begins by briefly summarizing the problem in the delegate's own words. They go on to speak about their own country, "The government of Iceland," and its opinions on the matter at hand. The delegate effectively establishes their position: they are supportive of and knowledgeable about emerging technologies, but they will demand caution and rigorous safety procedures in committee.</p>
+                                </div>
+                                <div class="tour-pane">
+                                    <h3>Second Paragraph</h3>
+                                    <p>Iceland is proud to adhere to the European Union’s strong General Data Protection Regulation (GDPR). This legislation has been extremely successful in correcting corporate data malpractice, as was evidenced when Swedish clothing retailer, H&M adopted several measures in 2020 and 2021 after being fined for illegally collecting and using employee data [1]. In addition to the GDPR’s foreign success, the government of Iceland has been careful to enforce these guidelines within Iceland’s borders. In September of 2023, the Confederation of Icelandic Enterprise (SA) resolved that the University of Iceland was in noncompliance with multiple articles of the GDPR and fined them 1.500.000 ISK (10100.69 EUR) [2]. Given the GDPR’s historic success, the government of Iceland would welcome the adoption by all UN member states of articles that provide consumer data protections that are of similar strength and thoroughness as the GDPR.</p>
+                                    <h3>Explanation</h3>
+                                    <p>This paragraph offers specific historical examples that back up Iceland's stance. By referencing both domestic and international cases involving the GDPR, the delegate shows familiarity with international law and Iceland's role within it. The paragraph also uses statistics and citations to increase credibility and demonstrates a clear policy recommendation: encourage UN members to adopt GDPR-style protections.</p>
+                                </div>
+                                <div class="tour-pane">
+                                    <h3>Final Paragraph</h3>
+                                    <p>Iceland holds that the only way to ensure the collaboration of all UN member states in implementing strong consumer data privacy laws is by collaborating heavily with nations whose data privacy laws are still in their infancy. By using their insights on how new data privacy legislation impacts the development of data and communications infrastructure, as well as by working with nations who already have strong data privacy laws, such as members of the EU, Iceland is confident that the Legal Committee will see a satisfactory resolution to this pressing issue.</p>
+                                    <h3>Explanation</h3>
+                                    <p>This final paragraph outlines Iceland’s broader diplomatic strategy. It emphasizes collaboration with both developed and developing nations, presenting Iceland as a mediator and leader on the issue. The delegate connects technological advancement with legislative progress and reinforces their country’s commitment to cooperation and global problem-solving.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resource-section">
+                    <h3>Crisis Notes (Crisis Only)</h3>
+                    <p>Crisis notes are how you communicate directly with the crisis staff during committee. Whether you're sending secret orders, requesting intelligence, or taking bold actions, your notes are your most powerful tool in shaping the direction of the crisis.</p>
+                    <p>Writing effective crisis notes takes creativity and strategy. A good note is clear, realistic, and shows initiative—it pushes the story forward and helps your character achieve their goals. But writing your first few can feel intimidating.</p>
+                    <p>Need help getting started? Click the buttons below to explore sample crisis notes and learn what makes a strong one!</p>
+                    <div>
+                        <div class="tour-buttons">
+                            <button class="tour-tab" data-index="0">Introduction</button>
+                            <button class="tour-tab" data-index="1">Context</button>
+                            <button class="tour-tab" data-index="2">Request</button>
+                        </div>
+
+                        <div class="tour-slider">
+                            <div class="tour-content-container">
+                                <div class="tour-pane">
+                                    <h3>Background</h3>
+                                    <p> I am acting as J. Robert Oppenheimer in a committee that follows the development of the atomic bomb in the Manhattan Project. During the committee, I will seek to flee the United States, terrified by the potential of nuclear war.</p>
+                                    <h3>Beginning</h3>
+                                    <p>Dear Emily Roberts,<br></p>
+                                    <p>My wonderful assistant! You have worked with me for over a decade, and I am still overjoyed every time I get the opportunity to send you a letter. Your service has been characterized by complete loyalty, discretion, and commitment; I appreciate everything that you have done for me very much.</p>
+                                    <h3>Explanation</h3>
+                                    <p>This opening sets a warm, personal tone while establishing trust and familiarity with the recipient. It shows Oppenheimer’s deep appreciation for his assistant, which makes the forthcoming request seem more plausible and personal. It also subtly signals that the matter is delicate and confidential.</p>
+                                </div>
+                                <div class="tour-pane">
+                                    <h3>Middle</h3>
+                                    <p>As I’m sure you know, I can not disclose specific details of my recent work. That said, I have a task that I must ask you to do.<br></p>
+                                    <p>I can still remember the vacation my family and I took to Geneva, Switzerland. I yearn for the tranquil parks, lakes, and roads that popped up throughout the city. I would quite like to surprise my family with a vacation house there.</p>
+                                    <h3>Explanation</h3>
+                                    <p>This section transitions from a general tone to a more serious and coded message. While framed as a nostalgic wish, it actually introduces Oppenheimer's covert plan to flee the country. The mention of Geneva signals a possible escape route, masked as an innocent family desire to make the plan appear innocuous to anyone intercepting the letter.</p>
+                                </div>
+                                <div class="tour-pane">
+                                    <h3>Ending (Request)</h3>
+                                    <p>Over the next weeks, I will begin sending you money that I have earned in my recent work, as well as money that I have saved from my years spent in academia. Please begin collecting this money, as well as researching real estate in Geneva. If you find any promising properties please let me know, so I can consider whether it would be a wise investment.<br>
+                                    <p>Yours very truly,<br>
+                                    J. Robert Oppenheimer
+                                    </p>
+                                    <h3>Explanation</h3>
+                                    <p>This final section serves as a direct but veiled request to assist in Oppenheimer’s escape. By framing the money transfers and property research as a simple financial investment, it allows plausible deniability while giving clear instructions. It reflects his fear of the consequences of nuclear warfare and his desire to distance himself from the fallout of the Manhattan Project.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resource-section">
+                    <h3>Rules of Procedure</h3>
+                    <p>Model UN works a lot like a real United Nations meeting, which means everyone follows a specific set of rules to keep debate fair, respectful, and organized. These are called the rules of procedure, and they cover things like when to speak, how to make motions, and how voting works.</p>
+                    <p>At first, the rules might seem a little formal, but they're there to help everyone have a voice and make sure the committee runs smoothly. Learning just a few basic motions can make a big difference in how confident you feel during the conference.</p>
+                    <p>Want to learn how it all works? Click below to see a simple guide to the most important rules and how to use them.</p>
+                    <div>
+                        <div class="tour-buttons">
+                            <button class="tour-tab" data-index="0">Respect and Integrity</button>
+                            <button class="tour-tab" data-index="1">Logistics</button>
+                            <button class="tour-tab" data-index="2">Formal Procedure</button>
+                        </div>
+
+                        <div class="tour-slider">
+                            <div class="tour-content-container">
+                                <div class="tour-pane">
+                                    <ul>
+                                        <li><strong>Respect</strong> - Everyone, including delegates, chairs, staff, and advisors, must be treated with dignity and respect at all times. Exhibitions of harassment, discrimination, or inappropriate behavior are unacceptable at any time. Respect for differences in culture, identity, and opinion is admired.</li>
+                                        <li><strong>Participation</strong> - Student delegates should listen to peers; interruptions or speaking over others are not permitted. Staying engaged in committee activities and making meaningful contributions during the session, in addition to avoiding distractions such as side conversations, phone use, or unrelated tasks, will lead to an enhanced conference experience.</li>
+                                        <li><strong>Instruction</strong> - Following all directions given by committee chairs, staff members, advisors and conference organizers is vital in order to run a successful conference.</li>
+                                        <li><strong>Attire</strong> - We politely ask students to wear formal attire, and steer away from clothes with distracting logos, messages, or images. JAMUN staff understand that “formal attire” means a variety of things in different cultures and for students from different backgrounds.</li>
+                                        <li><strong>Integrity</strong> - Student delegates should represent their assigned country or position faithfully and respectfully. Delegates may not plagiarize position papers, speeches, and draft resolutions. Behaving diplomatically–and in the spirit of cooperation–even during disagreements is much appreciated. There is a zero tolerance policy for bullying or badgering.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-pane">
+                                    <ul>
+                                        <li><strong>Movement</strong> - Throughout the conference, delegates should act in accordance with the Chair’s directions and stay in committee while it is in session. Additionally, they may ask the Chair about bathroom privileges, and unless specified, delegates may leave during unmoderated caucuses without permission to use the bathroom, and outside of unmoderated caucuses, ask for a “Point of Personal Privilege” (see Rule 12 for more info). Entering the crisis backroom, walking behind the dais, or approaching other committees or private spaces is prohibited.</li>
+                                        <li><strong>Credentials</strong> - All delegates, advisors, and staff are required to wear documentation throughout all of the conference. If a delegate loses their name tag or does not receive one, find the nearest staff member and a replacement will be provided.</li>
+                                        <li><strong>Roll Call</strong> - Delegates should raise placards and announce their presence upon being called during roll call, either with “present” or “present and voting.” Voting on all matters is required after announcing “present and voting.”</li>
+                                        <li><strong>Communication</strong> - Advisors and other non-delegate readers: please do not share this rule with any student delegates. This rule constitutes the second clue for Ad-Hoc I and II. Student delegates reading this rule may send an email with the subject line “Communication Rule” to their Ad-Hoc committee chair. In the next day, they will receive a response with the second clue.</li>
+                                        <li><strong>Agenda</strong> - At the beginning of committee, it will be necessary to set the agenda if there is more than one topic present. This may be done with a motion to set the agenda.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-pane">
+                                    <ul>
+                                        <li><strong>Speaker’s List</strong> - A list of speakers will be compiled to debate the considered topic when no motions, amendments, or caucuses are on the floor.</li>
+                                        <li><strong>Speeches</strong> - Delegates may give speeches and address the committee during different caucuses. Delegates may not address the committee without being recognized by the Chair, and the Chair may call the speaker to order if the speaker is off topic. If a speaker has finished their speech before their allotted time has elapsed, they may yield their remaining time to the Chair.</li>
+                                        <li><strong>Points</strong> - If a delegate experiences personal discomfort (e.g. has to go to the bathroom), or needs to interrupt a speech (e.g. has an emergency, can not hear speaker), they may ask for a Point of Personal Privilege. If a delegate feels that parliamentary procedure is not being followed correctly, they may make a Point of Order, in which case the Chair will review the Point and follow with a decision. Both a Point of Personal Privilege and a Point of Order may be called for at any time during committee–including speeches–but delegates are urged to use this ability with caution.</li>
+                                        <li><strong>Moderated Caucus</strong> - To propose a moderated caucus, delegates should raise their placards while the Chair is collecting motions. Once addressed, they should motion for a moderated caucus with a total time, a speaking time, and a relevant topic. Moderated caucuses require a majority vote to pass, and the delegate that proposes the caucus will be granted either the first or last speaking position. The Chair will choose other speakers, and then give the floor to the first speaker.</li>
+                                        <li><strong>Unmoderated Caucus</strong> - To propose an unmoderated caucus, delegates should raise their placards while the Chair is collecting motions. Once addressed, they should motion for an unmoderated caucus with a total time. They may include a brief topic, but are not required to. Unmoderated caucuses require a majority vote to pass, and begin immediately after receiving the vote until the time elapses.</li>
+                                        <li><strong>Voting</strong> - Only delegates who are recorded as present in the most recent roll call may vote. A motion requiring a “simple majority” passes only if there are more votes for than against. If there is an equal number of votes for and against, the motion fails. A motion requiring a “two-thirds majority” passes only if there are at least twice as many votes for as against. Any abstentions will not be taken into account when determining the results of a vote. All delegations have one, equal vote.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Existing JAMUN 101 Section -->
+                <section class="resource-section">
+                    <h3>JAMUN 101</h3>
+                    <p>New to Model UN or just looking for a quick refresher? Our JAMUN 101 video series on YouTube breaks down the basics of Model UN, from understanding committee roles to mastering debate etiquette. These short, engaging videos are perfect for visual learners and a great way to get up to speed before your next conference.</p>
+                    <p>Click the button below to visit our YouTube channel and start watching!</p>
+                    <a href="https://www.youtube.com/@JAMUN_USA" target="_blank" rel="noopener" class="regular-button">Watch JAMUN 101 Videos</a>
+                </section>
+            </div>
+
+            <!-- Right Column: New Prep Materials Tiles -->
+            <div class="right-column">
+                <h3 class="prep-materials-heading">More Prep Materials</h3>
+                <section class="prep-materials-grid">
+                    <a href="blog.html" class="prep-material-tile">
+                        <img src="images/BlogHeading.webp" alt="JAMUN Blog icon" />
+                        <div class="p-4">
+                            <h4>JAMUN Blog</h4>
+                            <p>The JAMUN blog offers insights, updates, and thought leadership on global diplomacy, international relations, and Model UN activities.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/document/d/1vrjGPGE3oNieqitt2ZgK0fneOPTDtoN-pNcvu8h924I/copy" class="prep-material-tile" target="_blank" rel="noopener">
+                        <img src="images/CommitteeGuides.webp" alt="Conference Guide icon"  />
+                        <div class="p-4">
+                            <h4>Conference Guides</h4>
+                            <p>Comprehensive guides for both delegates and advisors, covering everything from committee basics to packing for conference.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/document/d/1zNlotiDkQR2l7LlKxPQis6Xs3GUXRVsCS4aZ0pMUVF0/copy" class="prep-material-tile" target="_blank" rel="noopener">
+                        <img src="images/SampleWritings.webp" alt="Sample Writings icon" />
+                        <div class="p-4">
+                            <h4>Sample Writings</h4>
+                            <p>Take a look at a list of position papers, crisis notes, and draft resolutions, all handpicked by our veteran staff members.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/document/d/1v5b0HlkC-2mTCdx5U-0IdT8_-uPznBjo6ktaGTcBrFU/copy" class="prep-material-tile" target="_blank" rel="noopener">
+                        <img src="images/GraphicOrganizer.webp" alt="Graphic Organizers icon" />
+                        <div class="p-4">
+                            <h4>Graphic Organizers</h4>
+                            <p>Stuck writing your position paper? Download one of our graphic organizers to help you plan out your perfect paper.</p>
+                        </div>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="about.html">Our Mission</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:alexfumerton@gmail.com">Email Us</a>
+                <a href="https://www.instagram.com/jamun_usa" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.youtube.com/@JAMUN_USA" target="_blank" rel="noopener">YouTube</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 The Junior Assembly of the Model United Nations</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Find all the tour button containers on the page
+            document.querySelectorAll('.tour-buttons').forEach(buttonContainer => {
+                // Find the elements specific to this component instance
+                const componentWrapper = buttonContainer.parentElement;
+                const buttons = buttonContainer.querySelectorAll('.tour-tab');
+                const slider = componentWrapper.querySelector('.tour-slider');
+                const contentContainer = componentWrapper.querySelector('.tour-content-container');
+
+                // If any part of the component is missing, skip it
+                if (!slider || !contentContainer || buttons.length === 0) {
+                    return;
+                }
+
+                // --- INITIAL STATE SETUP ---
+                // 1. Collapse the slider by default.
+                slider.style.maxHeight = '0';
+                slider.style.overflow = 'hidden'; // Hide content that overflows during collapse
+
+                // 2. Add a smooth transition for the collapse/expand effect.
+                slider.style.transition = 'max-height 0.4s ease-in-out';
+
+                // --- EVENT LISTENER LOGIC ---
+                buttons.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const isAlreadyActive = tab.classList.contains('active');
+
+                        // First, always remove the 'active' class from all buttons in this group.
+                        buttons.forEach(btn => btn.classList.remove('active'));
+
+                        if (isAlreadyActive) {
+                            // If the clicked tab was already active, we just leave it off
+                            // and collapse the slider.
+                            slider.style.maxHeight = '0';
+                        } else {
+                            // If the clicked tab was not active, we need to activate it
+                            // and expand the slider.
+                            tab.classList.add('active');
+
+                            // Expand the slider to fit its content.
+                            // scrollHeight gives us the full height of the content inside.
+                            slider.style.maxHeight = slider.scrollHeight + 'px';
+
+                            // Move the slider to the correct pane.
+                            const index = tab.getAttribute('data-index');
+                            const paneCount = contentContainer.children.length;
+                            if (paneCount > 0) {
+                                const percentageToMove = index * (100 / paneCount);
+                                contentContainer.style.transform = `translateX(-${percentageToMove}%)`;
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

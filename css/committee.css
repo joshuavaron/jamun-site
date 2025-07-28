@@ -1,0 +1,102 @@
+/* Page-specific styles for the Committees page */
+main {
+    padding-top: 50px; /* Adjust as needed based on your header height and design */
+    padding-bottom: 50px;
+    /* This padding on 'main' creates the overall "global" margin on the page. */
+    /* The .committee-section will align to the left within this padding. */
+    padding-left: 20%; /* Added horizontal padding for content alignment */
+    padding-right: 20%; /* Added horizontal padding for content alignment */
+}
+
+.committee-section {
+    /* Removed max-width to allow it to fill the main's width */
+    /* Removed horizontal padding from here to allow lines to span full width */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* Removed margin-left and margin-right as it will naturally expand */
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Styling for the main committee group headings (e.g., General Assembly) */
+.committee-section h2 {
+    font-weight: 400;
+    font-size: 2.5em;
+    color: #334d74;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.committee-contact {
+    font-size: 1.1em;
+    margin-top: 7px;
+    color: #555;
+    margin-bottom: 7px;
+}
+
+.committee-contact a {
+    color: #334d74;
+    text-decoration: none;
+}
+
+.committee-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the individual committee names (e.g., DISEC, SOCHUM) */
+.committee-title-line {
+    border-bottom: 1px solid #ddd; /* Border applied here */
+    margin-bottom: 0;
+    /* No horizontal padding here, vertical padding will be on the link */
+}
+
+.committee-title-line a {
+    display: block; /* Make the link fill the available width */
+    font-size: 1.2em;
+    color: #334d74;
+    text-decoration: none; /* Remove default underline */
+    padding: 15px 0; /* Vertical padding applied to the link */
+    /* Horizontal padding is applied to the main container or through other means */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.committee-title-line a:hover {
+    background-color: #e6f0ff; /* Light blue background on hover */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.committee-title-line h3 {
+    font-size: 1em; /* Reset font size as it's now controlled by the parent 'a' */
+    color: inherit; /* Inherit color from parent 'a' */
+    margin: 0;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding-left: 15px; /* Adjust global left padding for very small screens */
+        padding-right: 15px;
+    }
+    .committee-section {
+        padding-top: 15px; /* Only vertical padding for small screens */
+        padding-bottom: 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .committee-section h2,
+    .committee-contact {
+        padding-left: 15px; /* Use fixed pixel padding for small screens */
+        padding-right: 15px;
+    }
+    .committee-title-line a {
+        padding: 15px 0; /* Vertical padding only for small screens */
+    }
+    .committee-title-line h3 {
+        padding-left: 15px; /* Use fixed pixel padding for small screens */
+        padding-right: 15px;
+    }
+}
