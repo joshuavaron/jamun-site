@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYTR5V7G12"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JYTR5V7G12');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selected Directive – JAMUN</title>
+    <meta name="description" content="A sample directive from JAMUN demonstrating proper formatting and structure for middle school Model UN delegates.">
+    <meta name="keywords" content="Model UN, JAMUN, directive, resolution, formatting, diplomacy, international negotiations">
+    <meta name="author" content="JAMUN Team">
+    <link rel="canonical" href="https://jamun.org/resources/sample-directive" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/main.webp" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Header and Navigation Colors */
+        header h1 {
+            color: #1f2937 !important; /* Dark gray for headings */
+        }
+
+        header p {
+            color: #1f2937 !important; /* Dark gray for text */
+        }
+
+        nav ul li a {
+            color: #1f2937 !important; /* Dark gray for link text */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        /* Resource Section specific styles */
+        .resource-section h3 {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+
+        .resource-section p {
+            font-size: 18px;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+        
+        .resource-section h4 {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header {
+            padding-bottom: 0px;
+        }
+
+        main {
+            padding-top: 0px; /* Removed top padding to align header with the top of the page */
+        }
+
+        /* Tour Slider Specific Styles */
+        .tour-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .tour-tab {
+            background-color: #f3f4f6;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            flex-shrink: 0;
+        }
+
+        .tour-tab:hover,
+        .tour-tab.active {
+            background-color: #d1d5db;
+        }
+
+        .tour-slider {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .tour-content-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .tour-pane {
+            width: 100%;
+            padding: 2rem;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        /* --- New Layout for Main Content --- */
+        .main-content-grid {
+            display: flex; /* Use flexbox for the main content area */
+            gap: 2rem; /* Space between the two columns */
+            margin: 20px auto; /* Center the content and add vertical margin */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .left-column {
+            flex: 9; /* Left column takes 2 parts of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        .right-column {
+            flex: 4; /* Right column takes 1 part of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        /* --- Prep Materials Grid (similar to blog-posts-grid) --- */
+        .prep-materials-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for tiles in the right column */
+            gap: 1.5rem; /* Spacing between tiles */
+        }
+
+        /* Prep Material Tile Styles (adapted from blog post cards) */
+        .prep-material-tile {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .prep-material-tile:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .prep-material-tile img {
+            width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        .prep-material-tile .p-4 {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .prep-material-tile h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .prep-material-tile p {
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .right-column .prep-materials-heading {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content-grid {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .left-column, .right-column {
+                flex: none; /* Remove flex sizing */
+                width: 100%; /* Take full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative">
+        <div class="header-top-row">
+            <a href="../index" aria-label="Home">
+                <img src="../images/main.webp" alt="Website Icon" class="header-icon" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../about">About</a></li>
+                    <li><a href="../conference">Conference</a></li>
+                    <li><a href="../committees">Committees</a></li>
+                    <li><a href="../resources">Prep & Resources</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc2eIKQTExf9tn7bxOA4K_oWNeRTw7ghDttpkoZ5fQtQT3XXw/viewform?usp=dialog">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Selected Directive</h1>
+    </header>
+
+    <main style="margin-top: 0px">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="resource-section">
+                    <h3>Developing Unforgettable Simulations for Thoughtful International Negotiations (DUSTIN)</h3>
+                    <ol>
+                        <li>Create a Model United Nations conference called JAMUN.
+                            <ol type="a">
+                                <li>JAMUN will hold two conferences per year, one in the spring and one in the fall.</li>
+                                <li>JAMUN will allow students in 5–8th grade to participate.
+                                    <ol type="i">
+                                        <li>Students will be required to have an adult sponsor in order to participate.</li>
+                                    </ol>
+                                </li>
+                                <li>JAMUN will create Crisis, General Assembly, and Ad Hoc committees.
+                                    <ol type="i">
+                                        <li>Students will be allowed to participate in only one committee.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>Establish the JAMUN Secretariat.
+                            <ol type="a">
+                                <li>High Schoolers at Deerfield High School and neighboring high schools will be called on to serve as staff members for JAMUN.</li>
+                                <li>Certain members of JAMUN staff will be given extra responsibilities to ensure a smooth and successful conference.
+                                    <ol type="i">
+                                        <li>These members will be said to form the “JAMUN Secretariat.”</li>
+                                        <li>Members of the “JAMUN Secretariat” will be given unique titles to describe the nature of their responsibilities.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>Call upon local middle school teachers to sponsor delegations.
+                            <ol type="a">
+                                <li>JAMUN staff will send emails to local middle school teachers encouraging them to create a Model UN club at their school.</li>
+                                <li>Dustin Simon will create a spreadsheet to keep track of the schools that will attend JAMUN.</li>
+                                <li>JAMUN staff may also send letters to schools.
+                                    <ol type="i">
+                                        <li>In the case that the JAMUN Secretariat believes that emails are being sent to spam, they may vote to begin sending “snail mail” to local teachers.</li>
+                                        <li>Members of JAMUN’s staff will be called to assist in the writing and addressing of these letters.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <a href="../resources" class="regular-button">← Back to Prep & Resources</a>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <h2 class="prep-materials-heading">Recommended</h2>
+                <section class="prep-materials-grid">
+                    <a href="blog" class="prep-material-tile">
+                        <img src="../images/BlogHeading.webp" alt="JAMUN Blog icon" />
+                        <div class="p-4">
+                            <h4>JAMUN Blog</h4>
+                            <p>The JAMUN blog offers insights, updates, and thought leadership on global diplomacy, international relations, and Model UN activities.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/general-assembly-guide" class="prep-material-tile">
+                        <img src="../images/CommitteeGuides.webp" alt="Conference Guide icon"  />
+                        <div class="p-4">
+                            <h4>General Assembly Guide</h4>
+                            <p>Comprehensive guides for both delegates and advisors, covering everything from committee basics to packing for conference.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/ga-position-paper-outline" class="prep-material-tile">
+                        <img src="../images/gapospaperhead.webp" alt="Sample Writings icon" />
+                        <div class="p-4">
+                            <h4>General Assembly Position Paper Outline</h4>
+                            <p>Take a look at a list of position papers, crisis notes, and draft resolutions, all handpicked by our veteran staff members.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/crisis-guide" class="prep-material-tile">
+                        <img src="../images/crisisguide.webp" alt="Graphic Organizers icon" />
+                        <div class="p-4">
+                            <h4>Crisis Guide</h4>
+                            <p>Stuck writing your position paper? Download one of our graphic organizers to help you plan out your perfect paper.</p>
+                        </div>
+                    </a>
+                    <a href="all-resources" class="regular-button">See More</a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="../about">Our Mission</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="../blog">Blog</a>
+            <a href="../model-un-glossary">MUN Glossary</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:alexfumerton@gmail.com">Email Us</a>
+                <a href="https://www.instagram.com/jamun_usa" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.youtube.com/@JAMUN_USA" target="_blank" rel="noopener">YouTube</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 The Junior Assembly of the Model United Nations</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+
+    const backButton = document.getElementById("back-button");
+
+    if (from === "all-resources") {
+      backButton.textContent = "← Back to All Resources";
+      backButton.href = "all-resources";
+    } else {
+      backButton.textContent = "← Back to Prep & Resources";
+      backButton.href = "../resources";
+    }
+  </script>
+</body>
+</html>

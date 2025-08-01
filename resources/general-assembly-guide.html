@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag     (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYTR5V7G12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-JYTR5V7G12');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Short Guide to the General Assembly - JAMUN</title>
+    <meta name="description" content="A short guide to the General Assembly process at JAMUN, outlining the four key phases for middle school delegates.">
+    <meta name="keywords" content="Model UN, JAMUN, middle school, prep, resources, student, MUN, General Assembly, GA guide, MUN rules">
+    <meta name="author" content="JAMUN Team">
+    <link rel="canonical" href="https://jamun.org/resources/general-assembly-guide" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/main.webp" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap' rel='stylesheet'>
+
+    <style>
+        /* Header and Navigation Colors */
+        header h1 {
+            color: #1f2937 !important; /* Dark gray for headings */
+        }
+
+        header p {
+            color: #1f2937 !important; /* Dark gray for text */
+        }
+
+        nav ul li a {
+            color: #1f2937 !important; /* Dark gray for link text */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        /* Resource Section specific styles */
+        .resource-section h3 {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+
+        .resource-section p {
+            font-size: 18px;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+        
+        .resource-section h4 {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header {
+            padding-bottom: 0px;
+        }
+
+        main {
+            padding-top: 0px; /* Removed top padding to align header with the top of the page */
+        }
+
+        /* Tour Slider Specific Styles */
+        .tour-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .tour-tab {
+            background-color: #f3f4f6;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            flex-shrink: 0;
+        }
+
+        .tour-tab:hover,
+        .tour-tab.active {
+            background-color: #d1d5db;
+        }
+
+        .tour-slider {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .tour-content-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .tour-pane {
+            width: 100%;
+            padding: 2rem;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        /* --- New Layout for Main Content --- */
+        .main-content-grid {
+            display: flex; /* Use flexbox for the main content area */
+            gap: 2rem; /* Space between the two columns */
+            margin: 20px auto; /* Center the content and add vertical margin */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .left-column {
+            flex: 9; /* Left column takes 2 parts of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        .right-column {
+            flex: 4; /* Right column takes 1 part of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        /* --- Prep Materials Grid (similar to blog-posts-grid) --- */
+        .prep-materials-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for tiles in the right column */
+            gap: 1.5rem; /* Spacing between tiles */
+        }
+
+        /* Prep Material Tile Styles (adapted from blog post cards) */
+        .prep-material-tile {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .prep-material-tile:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .prep-material-tile img {
+            width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        .prep-material-tile .p-4 {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .prep-material-tile h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .prep-material-tile p {
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .right-column .prep-materials-heading {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content-grid {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .left-column, .right-column {
+                flex: none; /* Remove flex sizing */
+                width: 100%; /* Take full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative">
+        <div class="header-top-row">
+            <a href="../index" aria-label="Home">
+              <img src="../images/main.webp" alt="Website Icon" class="header-icon" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../about">About</a></li>
+                    <li><a href="../conference">Conference</a></li>
+                    <li><a href="../committees">Committees</a></li>
+                    <li><a href="../resources">Prep & Resources</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc2eIKQTExf9tn7bxOA4K_oWNeRTw7ghDttpkoZ5fQtQT3XXw/viewform?usp=dialog">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>A Short Guide to the General Assembly</h1>
+    </header>
+
+    <main style="margin-top: 0px">
+        <div class="main-content-grid">
+            <!-- Left Column: This is where the main guide content will go. -->
+            <div class="left-column">
+                <section class="resource-section">                    
+                    <h3>Phase 1: Choose the Topic</h3>
+                    <p>The committee will begin with a series of moderated caucuses. Use these caucuses to establish your country’s stance on the topic. For example:</p>
+                    <ul>
+                        <li>"The Kingdom of Denmark believes that UN member states should..."</li>
+                        <li>"It is the policy of Nigeria to react to... by doing..."</li>
+                    </ul>
+                    <p>Use these moderated caucuses (mods) as opportunities to win allies! Referencing the speeches or ideas of other delegates will go a long way in building coalitions that will be vital during later portions of the conference.</p>
+                    <p>The topic that you will debate will be decided by a majority vote once a substantial number of delegates have been able to speak. This phase will take place during the very beginning of Session 1.</p>
+                    
+                    <h3>Phase 2: Voice Your Opinion</h3>
+                    <p>The beginning of the conference will be composed of many moderated caucuses. Make sure that you use these to clearly establish your country’s position. These are similar to the speeches given when deciding the topic but are more specific. Instead of telling the committee which problem you would like to solve, tell them how you would like to solve it.</p>
+                    <p>Try to use notes (either physical or memorized) that include statistics or historical examples. These will make your speeches more memorable and persuasive. Very good speeches are passionate and relatable, but there is a fine line between a passionate speech and an irrelevant one. For example, beginning a speech with a quick joke or rhetorical question would be appropriate, so long as it allows time for the delegate to speak about their country’s beliefs and position. Your speeches during moderated caucuses are how other delegates will know what your position is, so consistent participation is incredibly important.</p>
+                    
+                    <h4>Form Blocs</h4>
+                    <p>During moderated caucuses, make sure to pass notes to delegates with similar opinions that you would like to write working papers and draft resolutions with. For example:</p>
+                    <ul>
+                        <li>“Nigeria, The Kingdom of Denmark agrees with your opinion on ___. We look forward to working with you!”</li>
+                    </ul>
+                    <p>During unmoderated caucuses (unmods), try to recruit more delegates to your bloc. Try to find delegates that have not found a bloc and invite them to work with you! It also can’t hurt to come up with a fun name for your bloc! For example:</p>
+                    <ul>
+                        <li>“The Western Bloc”</li>
+                        <li>“The Bloc of Developing Nations.”</li>
+                    </ul>
+                    
+                    <h4>Begin Writing Your Working Paper</h4>
+                    <p>During unmoderated caucuses (and not during moderated caucuses), you and your bloc should write a paper describing your bloc’s proposed solutions to the problem that your committee is debating. Make sure that working papers are as detailed as possible (a guide to writing working papers exists on jamun.org in Prep & Resources).</p>
+                    <p>You will work on your position papers for all of Sessions 1 and 2 and most of Session 3. During later portions of this phase, you might consider adding details about your working paper into your speeches during moderated caucuses. For example:</p>
+                    <ul>
+                        <li>“The Western Bloc believes that... will be effective in solving the problems that Delegate Simon mentioned in his earlier speech.”</li>
+                    </ul>
+
+                    <h3>Phase 3: Mergers</h3>
+                    <p>Your chairs will limit the amount of draft resolutions that the committee will be allowed to vote on. This means that you will need to merge multiple working papers into single cohesive draft resolutions! Mergers are easiest when two (or more) blocs of similar opinions work together. During a merger, members from all involved blocs will come together to select the most important and agreeable clauses from their individual working papers to add to their final draft resolution.</p>
+                    <p>The working paper you create after merging should look similar to both blocs writing it. Blocs should discuss their new strategy for solving the problem before starting a new working paper. For example, a working paper that limits carbon emissions might merge with a working paper that promotes solar panels as a renewable energy source to yield a draft resolution that provides a robust system that limits the creation of additional emissions while promoting cleaner energy systems.</p>
+                    <p>Don’t forget to name your merger! Draft resolutions with catchy names stand out during voting! For example, a draft resolution that will address air pollution could be appropriately named “Better Regulations Eliminating Airborne Toxic Health Effects (BREATHE)”. Mergers will take place during Sessions 3, 4, and 5. Use some speaking time in moderated caucuses to speak about the results of the merger that you are working on!</p>
+
+                    <h3>Phase 4: Introducing Draft Resolutions and Voting</h3>
+                    <p>After draft resolutions have been completed, delegates will introduce them to the committee by handing a copy to their committee chairs. From this point, draft resolutions will be read to the committee, debated, and voted on. After each draft resolution is read to the committee, there will be a period of questioning, where delegates can ask questions about the contents of the resolution to its authors for a specified amount of time.</p>
+                    <p>If it is motioned for, there may also be a “Two For, Two Against” debate about each paper before they are voted on. In this form of debate, two delegates that support the paper and two delegates that are against it give alternating speeches (a supporting delegate will begin) regarding the draft resolution. More than one draft resolution can pass, so all draft resolutions will be voted on. In the case that two papers pass, the paper that is passed secondly will be used to resolve any contradictions between the two. This phase will take place during Sessions 5 and 6.</p>
+                    <p>Try not to rush through a General Assembly; all of these steps take time, and this timeline is a guide. It is important to know when to compromise, and when to stand by your opinion. Remember to be diplomatic and professional!</p>
+
+                    <a href="../resources" class="regular-button">← Back to Prep & Resources</a>
+                </section>
+            </div>
+            <div class="right-column">
+                <h2 class="prep-materials-heading">Recommended</h2>
+                <section class="prep-materials-grid">
+                    <a href="blog" class="prep-material-tile">
+                        <img src="../images/BlogHeading.webp" alt="JAMUN Blog icon" />
+                        <div class="p-4">
+                            <h4>JAMUN Blog</h4>
+                            <p>The JAMUN blog offers insights, updates, and thought leadership on global diplomacy, international relations, and Model UN activities.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/general-assembly-guide" class="prep-material-tile">
+                        <img src="../images/CommitteeGuides.webp" alt="Conference Guide icon"  />
+                        <div class="p-4">
+                            <h4>General Assembly Guide</h4>
+                            <p>Comprehensive guides for both delegates and advisors, covering everything from committee basics to packing for conference.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/ga-position-paper-outline" class="prep-material-tile">
+                        <img src="../images/gapospaperhead.webp" alt="Sample Writings icon" />
+                        <div class="p-4">
+                            <h4>General Assembly Position Paper Outline</h4>
+                            <p>Take a look at a list of position papers, crisis notes, and draft resolutions, all handpicked by our veteran staff members.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/crisis-guide" class="prep-material-tile">
+                        <img src="../images/crisisguide.webp" alt="Graphic Organizers icon" />
+                        <div class="p-4">
+                            <h4>Crisis Guide</h4>
+                            <p>Stuck writing your position paper? Download one of our graphic organizers to help you plan out your perfect paper.</p>
+                        </div>
+                    </a>
+                    <a href="all-resources" class="regular-button">See More</a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="../about">Our Mission</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="../blog">Blog</a>
+            <a href="../model-un-glossary">MUN Glossary</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:alexfumerton@gmail.com">Email Us</a>
+                <a href="https://www.instagram.com/jamun_usa" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.youtube.com/@JAMUN_USA" target="_blank" rel="noopener">YouTube</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 The Junior Assembly of the Model United Nations</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Find all the tour button containers on the page
+            document.querySelectorAll('.tour-buttons').forEach(buttonContainer => {
+                // Find the elements specific to this component instance
+                const componentWrapper = buttonContainer.parentElement;
+                const buttons = buttonContainer.querySelectorAll('.tour-tab');
+                const slider = componentWrapper.querySelector('.tour-slider');
+                const contentContainer = componentWrapper.querySelector('.tour-content-container');
+
+                // If any part of the component is missing, skip it
+                if (!slider || !contentContainer || buttons.length === 0) {
+                    return;
+                }
+
+                // --- INITIAL STATE SETUP ---
+                // 1. Collapse the slider by default.
+                slider.style.maxHeight = '0';
+                slider.style.overflow = 'hidden'; // Hide content that overflows during collapse
+
+                // 2. Add a smooth transition for the collapse/expand effect.
+                slider.style.transition = 'max-height 0.4s ease-in-out';
+
+                // --- EVENT LISTENER LOGIC ---
+                buttons.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const isAlreadyActive = tab.classList.contains('active');
+
+                        // First, always remove the 'active' class from all buttons in this group.
+                        buttons.forEach(btn => btn.classList.remove('active'));
+
+                        if (isAlreadyActive) {
+                            // If the clicked tab was already active, we just leave it off
+                            // and collapse the slider.
+                            slider.style.maxHeight = '0';
+                        } else {
+                            // If the clicked tab was not active, we need to activate it
+                            // and expand the slider.
+                            tab.classList.add('active');
+
+                            // Expand the slider to fit its content.
+                            // scrollHeight gives us the full height of the content inside.
+                            slider.style.maxHeight = slider.scrollHeight + 'px';
+
+                            // Move the slider to the correct pane.
+                            const index = tab.getAttribute('data-index');
+                            const paneCount = contentContainer.children.length;
+                            if (paneCount > 0) {
+                                const percentageToMove = index * (100 / paneCount);
+                                contentContainer.style.transform = `translateX(-${percentageToMove}%)`;
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+
+    const backButton = document.getElementById("back-button");
+
+    if (from === "all-resources") {
+      backButton.textContent = "← Back to All Resources";
+      backButton.href = "all-resources";
+    } else {
+      backButton.textContent = "← Back to Prep & Resources";
+      backButton.href = "../resources";
+    }
+  </script>
+</body>
+</html>
