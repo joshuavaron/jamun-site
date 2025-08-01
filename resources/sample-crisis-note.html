@@ -325,9 +325,7 @@
 
     <script src="js/script.js"></script>
     <script>
-    const params = new URLSearchParams(window.location.search);
-    const from = params.get("from");
-
+    const from = sessionStorage.getItem('navFrom');
     const backButton = document.getElementById("back-button");
 
     if (from === "all-resources") {
@@ -337,6 +335,9 @@
       backButton.textContent = "← Back to Prep & Resources";
       backButton.href = "../resources";
     }
+
+    // Optional: clear it if you don't want it to persist
+    sessionStorage.removeItem('navFrom');
   </script>
 </body>
 </html>
