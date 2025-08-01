@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag     (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYTR5V7G12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYTR5V7G12');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selected Draft Resolution – JAMUN</title>
+    <meta name="description" content="A sample draft resolution from JAMUN's WMO committee on the topic of Illicit Financial Flows, titled BREATHE.">
+    <meta name="keywords" content="Model UN, JAMUN, resolution, WMO, draft resolution, MUN example, climate, BREATHE">
+    <meta name="author" content="JAMUN Team">
+    <link rel="canonical" href="https://jamun.org/resources/sample-draft-resolution" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/main.webp" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap' rel='stylesheet'>
+    <style>
+        /* Header and Navigation Colors */
+        header h1 {
+            color: #1f2937 !important; /* Dark gray for headings */
+        }
+
+        header p {
+            color: #1f2937 !important; /* Dark gray for text */
+        }
+
+        nav ul li a {
+            color: #1f2937 !important; /* Dark gray for link text */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        /* Resource Section specific styles */
+        .resource-section h3 {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+
+        .resource-section p {
+            font-size: 18px;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+        
+        .resource-section h4 {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header {
+            padding-bottom: 0px;
+        }
+
+        main {
+            padding-top: 0px; /* Removed top padding to align header with the top of the page */
+        }
+
+        /* Tour Slider Specific Styles */
+        .tour-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .tour-tab {
+            background-color: #f3f4f6;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            flex-shrink: 0;
+        }
+
+        .tour-tab:hover,
+        .tour-tab.active {
+            background-color: #d1d5db;
+        }
+
+        .tour-slider {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .tour-content-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .tour-pane {
+            width: 100%;
+            padding: 2rem;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        /* --- New Layout for Main Content --- */
+        .main-content-grid {
+            display: flex; /* Use flexbox for the main content area */
+            gap: 2rem; /* Space between the two columns */
+            margin: 20px auto; /* Center the content and add vertical margin */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .left-column {
+            flex: 9; /* Left column takes 2 parts of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        .right-column {
+            flex: 4; /* Right column takes 1 part of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        /* --- Prep Materials Grid (similar to blog-posts-grid) --- */
+        .prep-materials-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for tiles in the right column */
+            gap: 1.5rem; /* Spacing between tiles */
+        }
+
+        /* Prep Material Tile Styles (adapted from blog post cards) */
+        .prep-material-tile {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .prep-material-tile:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .prep-material-tile img {
+            width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        .prep-material-tile .p-4 {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .prep-material-tile h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .prep-material-tile p {
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .right-column .prep-materials-heading {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content-grid {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .left-column, .right-column {
+                flex: none; /* Remove flex sizing */
+                width: 100%; /* Take full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative">
+        <div class="header-top-row">
+            <a href="../index" aria-label="Home">
+              <img src="../images/main.webp" alt="Website Icon" class="header-icon" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../about">About</a></li>
+                    <li><a href="../conference">Conference</a></li>
+                    <li><a href="../committees">Committees</a></li>
+                    <li><a href="../resources">Prep & Resources</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc2eIKQTExf9tn7bxOA4K_oWNeRTw7ghDttpkoZ5fQtQT3XXw/viewform?usp=dialog">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Selected Draft Resolution</h1>
+    </header>
+
+    <main style="margin-top: 0px">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="resource-section">
+                    <h3>Better Regulations Eliminating Airborne Toxic Health Effects (BREATHE)</h3>
+                    <p><em>Observing</em> a rise in average global temperatures,</p>
+                    <p><em>Noting with displeasure</em> the increase in worldwide natural disasters as a result of rising temperatures,</p>
+                    <p><em>Identifying</em> the need for consistent worldwide regulations to address the proliferation of global warming,</p>
+                    <p><em>Observing</em> recent advances in renewable energy, including, but not limited to, solar, hydroelectric, nuclear, and wind,</p>
+                    <p><em>Recognizing</em> a worldwide shortage of climate scientists and research aimed at slowing the proliferation of global warming,</p>
+                    <p><em>Aware</em> of the need for worldwide collaboration in addressing climate change,</p>
+
+                    <ol>
+                    <li>
+                        Creates a committee of nations devoted to limiting carbon emissions and removing carbon dioxide from the atmosphere;
+                        <ol type="a">
+                        <li>Any nations joining the committee must commit to lowering total carbon emissions by 45% from 2024 levels by 2030;</li>
+                        <li>Committee members must also plant 500,000 trees on their owned land by 2030;</li>
+                        <li>Committee members will be empowered to:
+                            <ol type="i">
+                            <li>Develop UN regulations surrounding carbon emissions;</li>
+                            <li>Promote the use of renewable energy globally.</li>
+                            </ol>
+                        </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Asks all nations to increase usage of renewable energy sources:
+                        <ol type="a">
+                        <li>Examples include solar, wind, nuclear, and hydroelectric power;</li>
+                        <li>Nations with GDP above $1 trillion are requested to provide financial support to developing nations;</li>
+                        <li>All nations are encouraged to share clean energy research publicly.</li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Assigns oversight of nuclear energy to the following five nations: United States, Russia, United Kingdom, France, and China;
+                        <ol type="a">
+                        <li>These countries will form a committee to implement nuclear energy safely;</li>
+                        <li>This committee is authorized to:
+                            <ol type="i">
+                            <li>Prevent weaponization of nuclear research, pursuant to the Treaty on the Non-Proliferation of Nuclear Weapons.</li>
+                            </ol>
+                        </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Establishes an international institute for research on carbon removal and renewable energy;
+                        <ol type="a">
+                        <li>This institute will:
+                            <ol type="i">
+                            <li>Research effective carbon dioxide removal methods (e.g., algae, plants);</li>
+                            <li>Collaborate with institutions worldwide;</li>
+                            <li>Support concurrent appointments of researchers at non-UN institutions;</li>
+                            <li>Advance technologies for solar panels, wind turbines, hydroelectric, and nuclear systems;</li>
+                            <li>Ensure all research is made public for global access.</li>
+                            </ol>
+                        </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Creates a scholarship fund for training climate scientists:
+                        <ol type="a">
+                        <li>Open to individuals at or above the age of majority in their home country;</li>
+                        <li>Recipients must commit to five years of work with the UN post-education;</li>
+                        <li>Funding will come from:
+                            <ol type="i">
+                            <li>Donations from IMF and UN member states;</li>
+                            <li>A portion of the WMO’s existing budget.</li>
+                            </ol>
+                        </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Urges nations to reduce plastic use, especially single-use items:
+                        <ol type="a">
+                        <li>Encourages legislation targeting plastic bags, bottles, and similar goods;</li>
+                        <li>Calls on leading economists to advise on:
+                            <ol type="i">
+                            <li>Tax policies to discourage plastic use;</li>
+                            <li>Funding options for climate solutions (e.g., renewable R&D).</li>
+                            </ol>
+                        </li>
+                        <li>Encourages grants for innovation in reusable alternatives;</li>
+                        <li>Creates a recycling initiative:
+                            <ol type="i">
+                            <li>Nations can donate single-use plastics for repurposing into consumer goods;</li>
+                            <li>Profits will fund the scholarship program created in Clause 5.</li>
+                            </ol>
+                        </li>
+                        </ol>
+                    </li>
+                    </ol>
+
+
+                    <a href="../resources" class="regular-button">← Back to Prep & Resources</a>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <h2 class="prep-materials-heading">Recommended</h2>
+                <section class="prep-materials-grid">
+                    <a href="blog" class="prep-material-tile">
+                        <img src="../images/BlogHeading.webp" alt="JAMUN Blog icon" />
+                        <div class="p-4">
+                            <h4>JAMUN Blog</h4>
+                            <p>The JAMUN blog offers insights, updates, and thought leadership on global diplomacy, international relations, and Model UN activities.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/general-assembly-guide" class="prep-material-tile" target="_blank" rel="noopener">
+                        <img src="../images/CommitteeGuides.webp" alt="Conference Guide icon"  />
+                        <div class="p-4">
+                            <h4>General Assembly Guide</h4>
+                            <p>Comprehensive guides for both delegates and advisors, covering everything from committee basics to packing for conference.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/ga-position-paper-outline" class="prep-material-tile" target="_blank" rel="noopener">
+                        <img src="../images/gapospaperhead.webp" alt="Sample Writings icon" />
+                        <div class="p-4">
+                            <h4>General Assembly Position Paper Outline</h4>
+                            <p>Take a look at a list of position papers, crisis notes, and draft resolutions, all handpicked by our veteran staff members.</p>
+                        </div>
+                    </a>
+
+                    <a href="resources/crisis-guide" class="prep-material-tile" target="_blank" rel="noopener">
+                        <img src="../images/crisisguide.webp" alt="Graphic Organizers icon" />
+                        <div class="p-4">
+                            <h4>Crisis Guide</h4>
+                            <p>Stuck writing your position paper? Download one of our graphic organizers to help you plan out your perfect paper.</p>
+                        </div>
+                    </a>
+                    <a href="all-resources" class="regular-button">See More</a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="../about">Our Mission</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="../blog">Blog</a>
+            <a href="../model-un-glossary">MUN Glossary</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:alexfumerton@gmail.com">Email Us</a>
+                <a href="https://www.instagram.com/jamun_usa" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.youtube.com/@JAMUN_USA" target="_blank" rel="noopener">YouTube</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 The Junior Assembly of the Model United Nations</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+
+    const backButton = document.getElementById("back-button");
+
+    if (from === "all-resources") {
+      backButton.textContent = "← Back to All Resources";
+      backButton.href = "all-resources";
+    } else {
+      backButton.textContent = "← Back to Prep & Resources";
+      backButton.href = "../resources";
+    }
+  </script>
+</body>
+</html>

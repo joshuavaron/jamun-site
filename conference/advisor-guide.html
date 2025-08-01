@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag     (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYTR5V7G12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYTR5V7G12');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advisor Guide – JAMUN</title>
+    <meta name="description" content="Essential information for MUN advisors attending JAMUN, including check-in, deadlines, dress code, and safety policy.">
+    <meta name="keywords" content="Model UN, JAMUN, advisor guide, chaperones, delegate check-in, MUN logistics">
+    <meta name="author" content="JAMUN Team">
+    <link rel="canonical" href="https://jamun.org/conference/advisor-guide" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/main.webp" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap' rel='stylesheet'>
+    <style>
+        /* Header and Navigation Colors */
+        header h1 {
+            color: #1f2937 !important; /* Dark gray for headings */
+        }
+
+        header p {
+            color: #1f2937 !important; /* Dark gray for text */
+        }
+
+        nav ul li a {
+            color: #1f2937 !important; /* Dark gray for link text */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        /* Resource Section specific styles */
+        .resource-section h3 {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+
+        .resource-section p {
+            font-size: 18px;
+            padding-right: 0; /* Adjusted for two-column layout */
+        }
+        
+        .resource-section h4 {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header {
+            padding-bottom: 0px;
+        }
+
+        main {
+            padding-top: 0px; /* Removed top padding to align header with the top of the page */
+        }
+
+        /* Tour Slider Specific Styles */
+        .tour-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .tour-tab {
+            background-color: #f3f4f6;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            flex-shrink: 0;
+        }
+
+        .tour-tab:hover,
+        .tour-tab.active {
+            background-color: #d1d5db;
+        }
+
+        .tour-slider {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .tour-content-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .tour-pane {
+            width: 100%;
+            padding: 2rem;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        /* --- New Layout for Main Content --- */
+        .main-content-grid {
+            display: flex; /* Use flexbox for the main content area */
+            gap: 2rem; /* Space between the two columns */
+            margin: 20px auto; /* Center the content and add vertical margin */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .left-column {
+            flex: 9; /* Left column takes 2 parts of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        .right-column {
+            flex: 4; /* Right column takes 1 part of available space */
+            min-width: 0; /* Allow content to shrink */
+        }
+
+        /* --- Prep Materials Grid (similar to blog-posts-grid) --- */
+        .prep-materials-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for tiles in the right column */
+            gap: 1.5rem; /* Spacing between tiles */
+        }
+
+        /* Prep Material Tile Styles (adapted from blog post cards) */
+        .prep-material-tile {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .prep-material-tile:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .prep-material-tile img {
+            width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        .prep-material-tile .p-4 {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .prep-material-tile h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .prep-material-tile p {
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .right-column .prep-materials-heading {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content-grid {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .left-column, .right-column {
+                flex: none; /* Remove flex sizing */
+                width: 100%; /* Take full width */
+            }
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+            accent-color: #1f2937;
+        }
+    </style>
+</head>
+<body>
+<header style="position: relative">
+    <div class="header-top-row">
+        <a href="../index" aria-label="Home">
+            <img src="../images/main.webp" alt="Website Icon" class="header-icon" />
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../about">About</a></li>
+                <li><a href="../conference">Conference</a></li>
+                <li><a href="../committees">Committees</a></li>
+                <li><a href="../resources">Prep & Resources</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc2eIKQTExf9tn7bxOA4K_oWNeRTw7ghDttpkoZ5fQtQT3XXw/viewform?usp=dialog">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>Advisor Guide</h1>
+</header>
+
+<main style="margin-top: 0px">
+    <div class="main">
+      <h1>JAMUN III Advisor Info Doc</h1>
+      <p>Hello Advisors! We would like to thank you for joining us for Jamun III; we are super excited to see you and your students in November! This document is intended as a complete overview of what advisors should expect on the days of conference (November 1 and 2), as well as the weeks leading up to it. If you have any further questions, or if you need clarification on a portion of this document, please send our Vice President, Alex Fumerton, an email at <a href="mailto:alexfumerton@gmail.com">alexfumerton@gmail.com</a>.</p>
+
+      <h2>Overview</h2>
+      <p>The Junior Assembly of the Model United Nations (JAMUN) is a student-led Model United Nations conference designed for middle school students. JAMUN offers young delegates the opportunity to study international issues, enhance their public speaking and critical thinking skills, and engage in respectful, competitive debates with their peers.</p>
+      <p>Over two days, students represent countries in an immersive simulation of the United Nations, where they debate both historical and contemporary issues. Each committee is staffed and supervised by high school and college students (from now on, “chairs”). Our chairs spend the months before conference training to guide discussion and debate, provide guidance, and make sure that all students have the chance to contribute and grow.</p>
+      <p>In advance of the conference, student delegates will prepare short essays (from now on, “position papers”) that clarify their position on the topics that they will debate. Writing a position paper gives students the opportunity to think critically about the issues that they will face in committee, as well as to develop their stance with care and deliberation. During the conference, following the position they outlined in their position paper, student delegates will collaborate to draft resolutions and directives, building key skills in research, negotiation, and diplomacy.</p>
+      <p>Student delegates will have their perspectives and opinions supported and challenged by peers from a variety of schools, backgrounds, and cultures. The largest Model UN conference for middle schoolers in the United States, JAMUN gives students the unique opportunity to meet students with similar interests and passions in a variety of states and cities across the United States.</p>
+
+      <h2>Advisor Checklist</h2>
+      <div>
+        <label><input type="checkbox" class="trackable-checkbox" id="check-confirm-participation"> Confirm participation: Complete the registration form listed on <a href="https://jamun.org">jamun.org</a>.</label><br><br>
+
+        <label><input type="checkbox" class="trackable-checkbox" id="check-build-team"> Build your student team:</label>
+        <ul>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-announce"> Announce participation to interested students and families.</label></li>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-meeting"> Hold an informational meeting or interest survey.</label></li>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-delegates"> Submit delegate names by <strong>October 8, 2025</strong>.</label></li>
+        </ul>
+
+        <label><input type="checkbox" class="trackable-checkbox" id="check-distribute-resources"> Distribute resources & templates:</label>
+        <ul>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-share-resources"> Share materials from the “Resources” tab on jamun.org.</label></li>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-external"> Encourage students to review external resources (e.g., bestdelegate.com).</label></li>
+        </ul>
+
+        <label><input type="checkbox" class="trackable-checkbox" id="check-practice"> (Optional) Hold Model UN practices:</label>
+        <ul>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-meetings"> Schedule 2–5 meetings for research and debate practice.</label></li>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-email-alex"> Email <a href="mailto:alexfumerton@gmail.com">alexfumerton@gmail.com</a> for help or resources.</label></li>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-mock-debates"> Host mock debates and peer reviews of position papers.</label></li>
+        </ul>
+
+        <label><input type="checkbox" class="trackable-checkbox" id="check-supplies"> Bring supplies:</label>
+        <ul>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-delegate-supplies"> <strong>Delegates:</strong> pens, notebooks, background guides, badge, formal attire</label></li>
+          <li><label><input type="checkbox" class="trackable-checkbox" id="check-advisor-supplies"> <strong>Advisors:</strong> communication tools, personal devices, advisor badge</label></li>
+        </ul>
+
+        <label><input type="checkbox" class="trackable-checkbox" id="check-logistics"> Finalize logistics: Confirm travel, share schedule, review dress code & expectations.</label><br><br>
+        <label><input type="checkbox" class="trackable-checkbox" id="check-submit-materials"> Collect and submit final materials: Ensure all position papers, forms, and payments are complete.</label><br><br>
+        <label><input type="checkbox" class="trackable-checkbox" id="check-follow-up"> Follow up post-conference: Celebrate, give feedback via survey, view photos on website.</label>
+      </div>
+
+      <h2>Key FAQs</h2>
+      <ul>
+        <li><strong>When will JAMUN III be?</strong> November 1–2, 2025</li>
+        <li><strong>Where?</strong> 
+          <ul>
+            <li>Chicagoland: Deerfield Village Hall, 850 Waukegan Rd, Deerfield, IL</li>
+            <li>Raleigh-Durham: Location TBD</li>
+          </ul>
+        </li>
+        <li><strong>How to register?</strong> Visit <a href="https://jamun.org">jamun.org</a> and click “Register” in the top-right.</li>
+        <li><strong>When are topics released?</strong> General Assembly and Crisis topics are live. Ad-Hoc revealed at Opening Ceremony.</li>
+        <li><strong>What is Ad-Hoc?</strong> A surprise crisis committee format revealed at conference.</li>
+        <li><strong>Position papers due?</strong> 11:59 PM on October 31, 2025. Required for awards.</li>
+        <li><strong>What are position papers?</strong> Short documents (0.5–1 page) outlining a delegate’s stance. See <a href="https://jamun.org/resources">Prep & Resources</a> for examples.</li>
+        <li><strong>How can students prepare?</strong> Through advisor-led meetings and collaboration.</li>
+      </ul>
+
+      <h2>Payment Info</h2>
+      <p>A $15 per-student payment is due on November 1. Advisors may bring checks or cash to the site.</p>
+      <p>Invoices will be sent upon registration. Checks payable to:<br>
+      <strong>Junior Assembly of the Model United Nations, Care of Alex Fumerton</strong></p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>About</h4>
+            <a href="../about">Our Mission</a>
+        </div>
+        <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="../blog">Blog</a>
+        </div>
+        <div class="footer-column">
+            <h4>Connect</h4>
+            <a href="mailto:alexfumerton@gmail.com">Email Us</a>
+            <a href="https://www.instagram.com/jamun_usa" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.youtube.com/@JAMUN_USA" target="_blank" rel="noopener">YouTube</a>
+        </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 The Junior Assembly of the Model United Nations</p>
+</footer>
+
+<!-- Checkbox localStorage tracking -->
+<script>
+  document.querySelectorAll('.trackable-checkbox').forEach((checkbox) => {
+    const id = checkbox.id;
+    const saved = localStorage.getItem(id);
+    if (saved !== null) checkbox.checked = (saved === 'true');
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem(id, checkbox.checked);
+    });
+  });
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
