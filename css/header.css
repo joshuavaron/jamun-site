@@ -1,0 +1,142 @@
+/* Style for the header to overlay on the image */
+header {
+  position: absolute; /* Position absolutely over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure it's above the image */
+  color: #ffffff; /* Make text visible against dark image */
+  box-sizing: border-box; /* Include padding in width calculation */
+  display: flex; /* Make header a flex container */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Container for icon and navigation to allow vertical centering */
+.header-top-row {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Push items to opposite ends */
+  width: 100%; /* Ensure it spans the width within header's padding */
+}
+
+/* Style for the icon at the top left */
+.header-icon {
+  width: 80px; /* Increased icon size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+header h1 {
+  margin-bottom: 40px; /* Decreased margin below h1 to bring p closer */
+  font-weight: 100; /* Made H1 text thinner */
+}
+
+.header-line {
+  border-bottom: 2px solid #0f172a; /* Dark blue line */
+  width: 50px; /* Short width for the line */
+  margin-bottom: 32px; /* Space after the line */
+  margin-top: 32px; /* Space before the line */
+}
+
+header p {
+  margin-top: 0; /* Removed default top margin from p */
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 15px 5%; /* Less padding on small screens */
+    }
+
+    .header-top-row {
+        flex-direction: column; /* Stack icon and nav */
+        align-items: center; /* Center them */
+    }
+
+    .header-icon {
+        width: 60px; /* Smaller icon */
+        margin-bottom: 15px; /* Space below icon */
+    }
+
+    header h1 {
+        font-size: 2.2em; /* Smaller H1 text */
+        margin-top: 50px; /* Less space from nav/icon */
+        margin-bottom: 20px;
+        padding-right: 2%; /* Adjust padding */
+        padding-left: 2%;
+        text-align: center; /* Center H1 */
+    }
+
+    header h2 {
+        font-size: 2.2em; /* Smaller H1 text */
+        margin-top: 50px; /* Less space from nav/icon */
+        margin-bottom: 20px;
+        padding-right: 2%; /* Adjust padding */
+        padding-left: 2%;
+        text-align: center; /* Center H1 */
+    }
+
+    header h2 {
+        font-size: 14px; /* Reverted font size for topic titles */
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: #1f2937; /* Dark gray for headings */
+        margin-bottom: 0px;
+        margin-top: 1rem;
+        text-align: center; /* Center h2 */
+        /* Removed line styles from h2 */
+    }
+
+
+    header p {
+        font-size: 16px;
+        padding-right: 2%; /* Adjust padding */
+        padding-left: 2%;
+        text-align: center; /* Center paragraph */
+    }
+
+    .header-email {
+        padding-left: 2%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    header {
+        padding: 20px 8%;
+    }
+
+    header h1 {
+        font-size: 3.5em;
+        margin-top: 100px;
+        padding-right: 8%;
+    }
+
+    header p {
+        font-size: 17px;
+        padding-right: 10%;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    header {
+        padding: 20px 20%; /* Original padding */
+    }
+
+    header h1 {
+        font-size: 4.5em; /* Original size */
+        margin-top: 150px;
+        padding-right: 20%;
+    }
+
+    header p {
+        font-size: 18px;
+        padding-right: 20%;
+    }
+
+    .padded-section {
+        padding: 0 20%; /* Original padding for sections */
+        text-align: center; /* Center text in padded sections */
+    }
+
+    .align-left {
+        text-align: left; /* Align text to the left */
+    }
+}

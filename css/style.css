@@ -27,70 +27,6 @@ body {
   z-index: -1; /* Send it to the background */
 }
 
-/* Style for the header to overlay on the image */
-header {
-  position: absolute; /* Position absolutely over the image */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10; /* Ensure it's above the image */
-  color: white; /* Make text visible against dark image */
-  padding: 20px 20%; /* Added 10% padding on left and right */
-  box-sizing: border-box; /* Include padding in width calculation */
-  display: flex; /* Make header a flex container */
-  flex-direction: column; /* Stack children vertically */
-}
-
-/* Container for icon and navigation to allow vertical centering */
-.header-top-row {
-  display: flex;
-  align-items: center; /* Vertically center items */
-  justify-content: space-between; /* Push items to opposite ends */
-  width: 100%; /* Ensure it spans the width within header's padding */
-}
-
-/* Style for the icon at the top left */
-.header-icon {
-  width: 80px; /* Increased icon size */
-  height: auto; /* Maintain aspect ratio */
-}
-
-header h1 {
-  margin-top: 150px; /* Increased margin to create more space from nav/icon */
-  margin-bottom: 40px; /* Decreased margin below h1 to bring p closer */
-  padding-right: 20%;
-  font-size: 4.5em; /* Made H1 text larger */
-  font-weight: lighter; /* Made H1 text thinner */
-  text-align: left; /* Aligned h1 to the left */
-  color: white !important; /* Ensure the text color is white, overriding any other styles */
-}
-
-header h2 {
-    font-size: 15px; /* Reverted font size for topic titles */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #1f2937; /* Dark gray for headings */
-    margin-bottom: 0px;
-    margin-top: 1rem;
-    /* Removed line styles from h2 */
-}
-
-.header-line {
-  border-bottom: 2px solid #0f172a; /* Dark blue line */
-  width: 50px; /* Short width for the line */
-  margin-bottom: 32px; /* Space after the line */
-  margin-top: 32px; /* Space before the line */
-}
-
-header p {
-  font-size: 18px;
-  font-weight: 100;
-  padding-right: 20%;
-  text-align: left; /* Aligned p to the left */
-  color: white !important; /* Ensure the text color is white, overriding any other styles */
-  margin-top: 0; /* Removed default top margin from p */
-}
-
 /* Style for navigation links */
 nav ul {
   list-style: none;
@@ -120,7 +56,7 @@ nav ul li a:hover {
 /* Adjust main content to start after the full-screen image area */
 main {
   margin-top: 100vh; /* Push main content down below the full-screen image */
-  padding: 20px 20%; /* Added 10% padding on left and right */
+  padding: 20px 0px; /* Added 10% padding on left and right */
   background-color: white; /* Ensure main content has a background */
   z-index: 5; /* Ensure main content is above the image but below header */
   position: relative; /* Needed for z-index to work */
@@ -133,7 +69,6 @@ main {
 main section h2 {
   font-family: "Freight Text Pro", Georgia, serif; /* Set font for the entire page */
   letter-spacing: 2px;
-  text-align: center; /* Center the "What We Do" heading */
   margin-bottom: 25px; /* Adjusted margin-bottom to decrease gap */
   font-size: 2.5em; /* Made H2 text larger */
 }
@@ -316,7 +251,6 @@ main section h2 {
 
 /* Conference Highlights Section */
 .conference-section {
-  padding: 60px 20%;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   color: #333;
@@ -522,65 +456,48 @@ body {
     overflow-x: hidden; /* Ensure this is always here */
 }
 
+.two-column-section {
+  margin-top: 5em;
+  display: flex;
+  gap: 5em;
+  align-items: stretch; /* ensure both columns have equal height */
+}
+
+.two-column-section div {
+  flex: 0 0 calc(50% - 2.5em);
+}
+
+.two-column-section img {
+  width: 100%;
+  height: 100%; /* stretch to match column height */
+  object-fit: cover; /* crop image to fit height, overflow horizontally */
+  display: block;
+}
+
+.two-column-section h2 {
+  margin-top: 0px;
+}
+
+.two-column-section p {
+  margin-bottom: 0px;
+}
+
+.two-column-section .left-column {
+  padding-left: 20%;
+  box-sizing: border-box;
+  text-align: left !important;
+}
+
+.two-column-section .right-column {
+  padding-right: 20%;
+  box-sizing: border-box;
+  text-align: right !important;
+}
+
 /* --- Media Queries for Responsiveness --- */
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    /* Header Section */
-    header {
-        padding: 15px 5%; /* Less padding on small screens */
-    }
-
-    .header-top-row {
-        flex-direction: column; /* Stack icon and nav */
-        align-items: center; /* Center them */
-    }
-
-    .header-icon {
-        width: 60px; /* Smaller icon */
-        margin-bottom: 15px; /* Space below icon */
-    }
-
-    header h1 {
-        font-size: 2.2em; /* Smaller H1 text */
-        margin-top: 50px; /* Less space from nav/icon */
-        margin-bottom: 20px;
-        padding-right: 2%; /* Adjust padding */
-        padding-left: 2%;
-        text-align: center; /* Center H1 */
-    }
-
-    header h2 {
-        font-size: 2.2em; /* Smaller H1 text */
-        margin-top: 50px; /* Less space from nav/icon */
-        margin-bottom: 20px;
-        padding-right: 2%; /* Adjust padding */
-        padding-left: 2%;
-        text-align: center; /* Center H1 */
-    }
-
-    header h2 {
-        font-size: 14px; /* Reverted font size for topic titles */
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        color: #1f2937; /* Dark gray for headings */
-        margin-bottom: 0px;
-        margin-top: 1rem;
-        text-align: center; /* Center h2 */
-        /* Removed line styles from h2 */
-    }
-
-
-    header p {
-        font-size: 16px;
-        padding-right: 2%; /* Adjust padding */
-        padding-left: 2%;
-        text-align: center; /* Center paragraph */
-    }
-
-    .header-email {
-        padding-left: 2%;
-    }
 
     nav ul {
         flex-direction: column; /* Stack navigation items */
@@ -736,25 +653,14 @@ body {
     .footer-column a {
         margin-bottom: 8px;
     }
+
+    .two-column-section img {
+      display: none;
+    }
 }
 
 /* Medium devices (tablets, 601px to 900px) */
 @media only screen and (min-width: 601px) and (max-width: 900px) {
-    header {
-        padding: 20px 8%;
-    }
-
-    header h1 {
-        font-size: 3.5em;
-        margin-top: 100px;
-        padding-right: 8%;
-    }
-
-    header p {
-        font-size: 17px;
-        padding-right: 10%;
-    }
-
     main {
         padding: 20px 8%;
     }
@@ -840,23 +746,8 @@ body {
 
 /* Large devices (desktops, 901px and up) - Current styles are largely for this */
 @media only screen and (min-width: 901px) {
-    header {
-        padding: 20px 20%; /* Original padding */
-    }
-
-    header h1 {
-        font-size: 4.5em; /* Original size */
-        margin-top: 150px;
-        padding-right: 20%;
-    }
-
-    header p {
-        font-size: 18px;
-        padding-right: 20%;
-    }
-
     main {
-        padding: 20px 20%; /* Original padding */
+        padding: 20px 0px; /* Original padding */
     }
 
     main section h2 {
@@ -903,10 +794,6 @@ body {
 
     .impact-circle p {
         font-size: 1.3em;
-    }
-
-    .conference-section {
-        padding: 60px 20%;
     }
 
     .register-banner {
