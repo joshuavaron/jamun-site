@@ -28,6 +28,7 @@ header {
 header h1 {
   margin-bottom: 40px; /* Decreased margin below h1 to bring p closer */
   font-weight: 100; /* Made H1 text thinner */
+  font-size: clamp(2rem, 5vw, 4.5rem);
 }
 
 .header-line {
@@ -57,7 +58,6 @@ header p {
     }
 
     header h1 {
-        font-size: 2.2em; /* Smaller H1 text */
         margin-top: 50px; /* Less space from nav/icon */
         margin-bottom: 20px;
         padding-right: 2%; /* Adjust padding */
@@ -96,6 +96,11 @@ header p {
     .header-email {
         padding-left: 2%;
     }
+
+    .padded-section {
+        padding: 0 5%; /* Less padding for sections */
+        text-align: center; /* Center text in padded sections */
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -104,7 +109,6 @@ header p {
     }
 
     header h1 {
-        font-size: 3.5em;
         margin-top: 100px;
         padding-right: 8%;
     }
@@ -121,7 +125,6 @@ header p {
     }
 
     header h1 {
-        font-size: 4.5em; /* Original size */
         margin-top: 150px;
         padding-right: 20%;
     }
