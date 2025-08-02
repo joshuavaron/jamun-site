@@ -9,7 +9,7 @@ body {
   min-height: 100vh; /* Ensure body takes full height */
   display: flex; /* Use flexbox to stack content after the full-screen image */
   flex-direction: column;
-  font-family: "Freight Text Pro", Georgia, serif; /* Set font for the entire page */
+  font-family: "Crimson Pro", Georgia, serif; /* Set font for the entire page */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -67,7 +67,7 @@ main {
 
 /* Styling for the "What We Do" section heading */
 main section h2 {
-  font-family: "Freight Text Pro", Georgia, serif; /* Set font for the entire page */
+  font-family: "Crimson Pro", Georgia, serif; /* Set font for the entire page */
   letter-spacing: 2px;
   margin-bottom: 25px; /* Adjusted margin-bottom to decrease gap */
   font-size: 2.5em; /* Made H2 text larger */
