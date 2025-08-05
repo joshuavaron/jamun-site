@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag     (gtag.js) -->
+    <!-- Google tag     (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYTR5V7G12"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -34,7 +34,8 @@
           margin: 0 auto;
       }
 
-      .mission-section h2 {
+      .mission-section h2,
+      .partners-section h2 { /* Apply to both sections */
           font-size: 2.5rem; /* 40px */
           color: #333;
           margin-bottom: 20px;
@@ -47,50 +48,138 @@
           margin: 0 auto 50px auto; /* Center the statement */
       }
 
-      .mission-pillars {
+      .mission-pillars { /* Apply flex properties to both lists */
           display: flex;
           justify-content: space-between;
           gap: 30px;
           margin-top: 40px;
       }
 
-      .pillar {
+      .pillar { /* Apply common styles to both pillar and partner cards */
           flex-basis: 31%;
           background-color: #fff;
           padding: 30px;
           border-radius: 8px;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color for transition */
       }
 
-      .pillar:hover {
+      .pillar:hover { /* Specific hover for pillars */
           transform: translateY(-10px);
           box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       }
 
-      .pillar h3 {
+      .pillar h3 { /* Apply to both pillar and partner headings */
           font-size: 1.5rem; /* 24px */
           color: #0056b3; /* A professional blue to match the theme */
           margin-bottom: 15px;
       }
 
-      .pillar p {
+      .pillar p { /* Apply to both pillar and partner paragraphs */
           font-size: 1rem; /* 16px */
           color: #666;
           line-height: 1.6;
           text-align: left; /* Justify text inside pillars for readability */
       }
 
+      /* Partners Section Specific Styles */
+      .partners-section {
+          background-color: #f9f9f9;
+          text-align: center;
+          padding-top: 3em;
+          padding-bottom: 3em;
+      }
+
+      .partners-alternating-layout {
+          display: flex;
+          flex-direction: column; /* Stack partners vertically */
+          gap: 60px; /* More space between partner blocks */
+          margin-top: 40px;
+      }
+
+      .partner-item {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          background-color: #fff;
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+          transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Updated transition */
+      }
+
+      .partner-item.reverse {
+          flex-direction: row-reverse; /* Reverse order for alternating */
+      }
+
+      .partner-item:hover {
+          background-color: #e8e8e8; /* Darken background slightly */
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Slightly more pronounced shadow */
+      }
+
+      .partner-image {
+          flex-shrink: 0; /* Prevent image from shrinking */
+          width: 200px; /* Fixed width for logo container */
+          text-align: center;
+      }
+
+      .partner-logo {
+          max-width: 100%;
+          height: auto;
+          border-radius: 4px;
+      }
+
+      .partner-content {
+          flex-grow: 1; /* Allow content to take remaining space */
+          text-align: left; /* Ensure text is left-aligned within its container */
+      }
+
+      .partner-content h3 {
+          font-size: 1.8rem; /* Slightly larger heading */
+          color: #0056b3;
+          margin-bottom: 10px;
+      }
+
+      .partner-content p {
+          font-size: 1.1rem; /* Slightly larger paragraph */
+          line-height: 1.7;
+          color: #555;
+      }
+
+      .partner-item-link {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        }
+
+        .partner-item-link:hover {
+        cursor: pointer;
+        background-color: #f0f0f0; /* subtle highlight on hover */
+        }
+
       /* Responsive adjustments for smaller screens */
       @media (max-width: 768px) {
-          .mission-pillars {
+          .mission-pillars,
+          .partners-alternating-layout { /* Apply to both lists */
               flex-direction: column;
               align-items: center;
           }
 
-          .pillar {
+          .pillar,
+          .partner-item,
+          .partner-item.reverse { /* Apply to both pillar and partner cards */
               flex-basis: 100%;
               max-width: 450px; /* Limit width on mobile for better reading */
+              flex-direction: column; /* Stack image and text vertically on small screens */
+              text-align: center;
+              padding: 20px;
+              gap: 20px;
+          }
+          .partner-image {
+              width: 150px; /* Adjust image width for mobile */
+          }
+          .partner-content {
+              text-align: center; /* Center text on mobile */
           }
       }
     </style>
@@ -141,6 +230,39 @@
             </div>
         </div>
       </section>
+
+      <!-- Our Partners Section -->
+      <section class="partners-section padded-section">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="partners-alternating-layout">
+            <a href="https://www.luriechildrens.org" target="_blank" rel="noopener noreferrer" class="partner-item-link">
+                <div class="partner-item">
+                <div class="partner-image">
+                    <img src="images/luriechildrenslogo.webp" alt="Ann & Robert H. Lurie Children's Hospital of Chicago Logo" class="partner-logo">
+                </div>
+                <div class="partner-content">
+                    <h3>Ann & Robert H. Lurie Children's Hospital of Chicago</h3>
+                    <p>JAMUN is honored to partner with Lurie Children’s, a nationally recognized leader in pediatric care, research, and education. Through this partnership, we’re proud to offer patients at Lurie's free participation in our conference, expanding access to leadership and diplomacy experiences for young people who inspire us every day.</p>
+                </div>
+                </div>
+            </a>
+
+            <a href="https://highjumpchicago.org" target="_blank" rel="noopener noreferrer" class="partner-item-link">
+                <div class="partner-item reverse">
+                <div class="partner-image">
+                    <img src="images/highjumplogo.webp" alt="High Jump Logo" class="partner-logo">
+                </div>
+                <div class="partner-content">
+                    <h3>High Jump</h3>
+                    <p>Partnering with High Jump enables JAMUN to reach academically ambitious middle schoolers from across Chicago and provide them with free access to the transformative experience of Model UN. Together, we empower curious and motivated 7th and 8th graders—especially those from limited economic backgrounds—to grow as confident, well-rounded leaders on a global stage.</p>
+                </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
     </main>
     <section class="register-banner">
         <div class="register-overlay">
