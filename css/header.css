@@ -42,6 +42,40 @@ header p {
   margin-top: 0; /* Removed default top margin from p */
 }
 
+nav ul li.donate-btn a {
+background-color: #397bce;
+padding: 0.45em 1.2em;
+color: #ffffff !important; /* White text for contrast */
+border-radius: 6px;
+text-decoration: none;
+border: 2px solid transparent;
+transition: background-color 0.25s ease, border-color 0.25s ease;
+display: inline-block;
+}
+
+nav ul li.donate-btn a:hover,
+nav ul li.donate-btn a:focus {
+background-color: #2f65b4;
+border-color: #255a96;
+outline: none;
+}
+
+nav ul {
+display: flex; /* horizontal menu */
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+nav ul li {
+display: flex;
+align-items: center; /* vertically center link contents */
+}
+
+nav ul li:first-child {
+margin-left: 0; /* remove left margin for first item */
+}
+
 @media only screen and (max-width: 600px) {
     header {
         padding: 15px 5%; /* Less padding on small screens */
