@@ -513,6 +513,11 @@ body {
         padding: 8px 15px; /* Larger tap target */
     }
 
+    body ul{
+      text-align: left;
+      padding-left: 1em;
+    }
+
     .regular-button {
         width: 70%; /* Full width button */
         text-align: center; /* Center button text */
@@ -660,17 +665,21 @@ body {
 
     .two-column-section .left-column {
         padding-left: 0; /* Remove left padding */
+        order: 1;
         text-align: center; /* Center text */
     }
 
     .two-column-section .right-column {
         padding-right: 0; /* Remove right padding */
+        order: -1;
         text-align: center; /* Center text */
     }
-
+    /* keep the mobile padding, but don't force display:block */
     .two-column-section {
-        display: block;
-        padding: 0px 5%; /* Add padding for mobile */
+      margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 5%;
     }
 }
 
