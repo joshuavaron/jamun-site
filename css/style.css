@@ -543,6 +543,7 @@ body {
     .impact-section {
         height: auto; /* Auto height to fit stacked content */
         padding: 40px 5%; /* Adjust padding */
+        margin-bottom: 3em;
     }
 
     .impact-section h2 {
