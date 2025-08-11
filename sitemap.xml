@@ -3,177 +3,197 @@
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://jamun.org/</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/about</loc>
-		<lastmod>2025-08-05T23:19:48+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://jamun.org/conference</loc>
-		<lastmod>2025-08-05T23:19:48+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://jamun.org/donate</loc>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://jamun.org/conference</loc>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://jamun.org/grants</loc>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/model-un-glossary</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/nato</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/interpol</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/who</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/icj</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/russia</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/bolshevik</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/unsc</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/adhoc1</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/committees/adhoc2</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/general-assembly-guide</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/ga-position-paper-outline</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/crisis-guide</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/all-resources</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/Building-Relationships-with-Fellow-Delegates</loc>
-		<lastmod>2025-08-09T15:58:46+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/On-Local-Government</loc>
-		<lastmod>2025-08-06T16:03:37+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/The-Delegate-Who-Listens</loc>
-		<lastmod>2025-08-05T23:19:48+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://jamun.org/blog/How-to-Prepare-for-Your-First-Model-UN-Conference</loc>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://jamun.org/blog/From-Simulation-to-Reality-MUN-and-Its-Connection-to-the-UN</loc>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/A-Young-Leaders-Guide-to-Model-UN</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/Becoming-the-Master-of-the-Unmod</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/The-Role-of-Resolutions</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/GA-Better-than-Crisis</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/Ad-Hoc-Better-than-Crisis</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/blog/Mastering-Your-First-Position-Paper</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/sample-directive</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/sample-draft-resolution</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/crisis-position-paper-outline</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.51</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/sample-crisis-note</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.51</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/directive-outline</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.51</priority>
 	</url>
 	<url>
 		<loc>https://jamun.org/resources/draft-resolution-outline</loc>
-		<lastmod>2025-08-01T18:30:47+00:00</lastmod>
+		<lastmod>2025-08-11T18:02:20+00:00</lastmod>
 		<priority>0.51</priority>
 	</url>
 </urlset>
